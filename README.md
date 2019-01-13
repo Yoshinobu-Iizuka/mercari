@@ -66,7 +66,7 @@
 |item|reference|foreign_key: true|
 
 ### Association
-- belongs_to: image
+- belongs_to: item
 
 ## usersテーブル
 |Column|Type|Options|
