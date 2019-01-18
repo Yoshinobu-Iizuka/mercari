@@ -130,17 +130,6 @@
 - belongs_to :user
 - belongs_to :buyer
 
-## buyersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|reference|null: false, foreign_key :true|
-
-### Association
-- has_many :comments
-- has_one :item
-- has_many :evaluations
-- belongs_to :user
-
 
 ## tradesテーブル
 |Column|Type|Options|
