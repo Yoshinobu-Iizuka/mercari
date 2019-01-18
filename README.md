@@ -44,6 +44,26 @@
 ### Association
 - has_many :items, through: :item_categories
 - has_many :item_categories
+- has_one :child_category
+
+## child_categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|category_id|reference|foreign_key: true|
+
+### Association
+- belongs_to :category
+- has_one :grandchild_category
+
+## grandchild_categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|child_category_id|reference|foreign_key: true|
+
+### Association
+- belongs_to :child_category
 
 
 ## commentsテーブル
