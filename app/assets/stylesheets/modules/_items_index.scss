@@ -1,0 +1,214 @@
+/* slick overwrite */
+.slick-slider {
+  margin: 0;
+}
+.slick-dots {
+  bottom: 20px;
+  li {
+    button {
+      &:before {
+        font-size: 15px;
+        line-height: 22px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+.slick-prev {
+  left: 60px;
+  z-index: 1;
+  &:before {
+    content: image-url("carousel-prev.png");
+  }
+}
+.slick-next {
+  right: 70px;
+  z-index: 1;
+  &:before {
+    content: image-url("carousel-next.png");
+  }
+}
+.slick-prev, .slick-next {
+  top: 45%;
+  &::before {
+    font-size: 50px;
+  }
+}
+/* top-page */
+.top-banner {
+  width: 100%;
+  .top-banner--inner {
+    max-width: 860px;
+    position: relative;
+    display: flex;
+    padding: 48px 0;
+    .left {
+      width: 480px;
+      max-width: 480px;
+      h2 {
+        font-size: 60px;
+        line-height: 1.2;
+        font-weight: bold;
+      }
+      p {
+        font-size: 18px;
+        margin: 16px 0 0;
+      }
+      .app-link {
+        margin: 24px 0 0;
+        display: flex;
+        a {
+          display: inline-block;
+          img {
+            width: 170px;
+            height: 50px;
+          }
+        }
+        a + a {
+          margin-left: 8px;
+        }
+      }
+    }
+    .right {
+      img {
+        max-height: 390px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+.bg-image-room {
+  background-image: image-url("main_bg_pc.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pickup {
+  padding: 40px 0;
+  text-align: center;
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+}
+.top-items {
+  width: 940px;
+  h3 {
+    font-size: 22px;
+    margin: 26px 0;
+    a {
+      color: #0099e8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+  .item-line {
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: #000000;
+      text-decoration: none;
+      display: inline-block;
+      .items-box {
+        background-color: #ffffff;
+        &--image {
+          max-height: 213px;
+          margin: 0;
+          padding: 0;
+          img {
+            width: 100%;
+            width: 213px;
+            height: 213px;
+            object-fit: cover;
+          }
+        }
+        .item--caption {
+          padding: 18px 16px 8px;
+          h4 {
+            text-align: left;
+            font-weight: 400;
+            word-break: break-word;
+            overflow: hidden;
+            height: 3em;
+            position: relative;
+            &::after {
+              content: '';
+              display: block;
+              width: 50%;
+              height: 1.5em;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              background: linear-gradient(to right, rgba(255,255,255,0), #fff 72%);
+            }
+          }
+          div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+            line-height: 18px;
+            .price {
+              font-size: 18px;
+              font-weight: bold;
+            }
+            .like {
+              font-size: 16px;
+              .like-icon {
+                margin-right: 4px;
+                color: gray;
+              }
+            }
+          }
+          p {
+            font-size: 10px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  .link-to-all {
+    text-align: right;
+    padding: 20px 0 30px;
+    a {
+      color: #0099e8;
+      text-decoration: none;
+      font-size: 14px;
+      &:hover {
+        text-decoration: underline;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+.put-item {
+  display: inline-block;
+  text-decoration: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+  border-radius: 50%;
+  &--inner {
+    display: flex;
+    width: 160px;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+      font-size: 22px;
+      color: #ffffff;
+      line-height: 22px;
+      margin: -7px 0 0 0;
+    }
+    .icon-camera {
+      color: #ffffff;
+      font-size: 60px;
+      margin-top: 5px;
+    }
+  }
+}
