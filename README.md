@@ -100,7 +100,6 @@
 |mail|string|unique: true|
 
 ### Association
-- has_one :card
 - has_many :items
 - has_many :comments
 - has_many :buyers
@@ -115,11 +114,9 @@
 |expiration_date_month|integer|null: false|
 |expiration_date_year|integer|null: false|
 |user_id|reference|foreign_key: true|
-|item_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :user
-- belongs_to :card
 
 ## Likesテーブル
 |Column|Type|Options|
