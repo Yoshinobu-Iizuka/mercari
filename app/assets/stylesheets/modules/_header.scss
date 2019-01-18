@@ -118,22 +118,8 @@ header {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  *zoom: 1;
 }
-
-.menu > li {
-  float: left;
-  a {
-    display: block;
-    color: #000000;
-    text-decoration: none;
-    font-size: 14px;
-    // padding: 0 16px;
-    &:hover {
-      color: #000000;
-    }
-  }
-}
-
 ul.menu__second-level {
   visibility: hidden;
   opacity: 0;
@@ -176,9 +162,6 @@ ul.menu__fourth-level {
   transition: all .5s;
 }
 
-.menu {
-  *zoom: 1;
-}
 .menu > li.menu__single {
   position: relative;
 }
@@ -195,7 +178,6 @@ li.menu__single:hover ul.menu__second-level {
   top: 35px;
   visibility: visible;
   opacity: 1;
-  // border: 1px solid gray;
   width: 224px;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
 }
