@@ -12,26 +12,49 @@
 |shipping_method|string|null: false|
 |shipment_source_area|string|null: false|
 |estimated_shipping_date|string|null: false|
-|user|reference|foreign_key: true|
-|buyer|reference|foreign_key: true|
+|user_id|reference|foreign_key: true|
+|buyer_id|reference|foreign_key: true|
 
 ### Association
-- has_many: likes
-- has_many: images
 - has_one: brand
 - has_one: trade
-- has_many: categories
+- has_one: card
+- has_many: likes
+- has_many: images
 - has_many: comments
+- has_many :categories, through: :item_categories
+- has_many :item_categories
+
+
+## item_categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|item_id|reference|foreign_key: true|
+|category_id|reference|foreign_key: true|
+
+### Association
+- belongs_to :item
+- belongs_to :category
+
+## categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+- has_many :items, through: :item_categories
+- has_many :item_categories
+
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |before_comment|text||
 |trade_comment|text||
-|user|reference|foreign_key: true|
-|item|reference|foreign_key: true|
-|buyer|reference|foreign_key: true|
-|trade|reference|foreign_key: true|
+|user_id|reference|foreign_key: true|
+|item_id|reference|foreign_key: true|
+|buyer_id|reference|foreign_key: true|
+|trade_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to: item
@@ -43,27 +66,17 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|text||
-|item|reference|foreign_key: true|
+|item_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to: item
 
-## categoriesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|categorys_first|string|null: false|
-|categorys_second|string|null: false|
-|categorys_third|string|null: false|
-|item|reference|foreign_key: true|
-
-### Association
-- belongs_to: item
 
 ## item_imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null: false|
-|item|reference|foreign_key: true|
+|item_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to: item
@@ -81,8 +94,8 @@
 |postal_code|integer|null: false|
 |prefecture|string|null: false|
 |city|string|null: false|
-|address1|string|null: false|
-|address2|string|null: false|
+|address_first|string|null: false|
+|address_second|string|null: false|
 |telephone|integer|unique: true|
 |mail|string|unique: true|
 
@@ -93,7 +106,7 @@
 - has_many :buyers
 - has_many :evaluations
 - has_many :likes
-
+- has_many :trades
 
 ## cardsテーブル
 |Column|Type|Options|
@@ -102,10 +115,11 @@
 |expiration_date_month|integer|null: false|
 |expiration_date_year|integer|null: false|
 |user_id|reference|foreign_key: true|
+|item_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :user
-
+- belongs_to :card
 
 ## Likesテーブル
 |Column|Type|Options|
@@ -123,8 +137,8 @@
 |------|----|-------|
 |user_id|reference|null: false, foreign_key: true|
 |buyer_id|reference|null: false, foreign_key: true|
-|comment|text||
-|value|integer||
+|comment|text|
+|value|integer|
 
 ### Association
 - belongs_to :user
@@ -134,10 +148,12 @@
 ## tradesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|deposit|string||
-|shipping_notification|integer||
+|deposit|string|
+|shipping_notification|integer|
 |item_id|referemce|null: false, foreign_key: true|
+|user_id|referemce|null: false, foreign_key: true|
 
 ### Association
 - has_many :comments
 - belongs_to :item
+- belongs_to :user
