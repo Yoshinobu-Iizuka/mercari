@@ -1,0 +1,121 @@
+footer{
+  width: 100vw;
+  height: 876px;
+  padding: 0;
+  background-color: $color_black;
+  .app-bannar {
+    height: 260px;
+    background-image: image-url("download.jpg");
+  }
+  .download {
+    margin: 0 345px;
+    height: 260px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .download-inner{
+      color: white;
+      padding-top: 40px;
+      h2 {
+        font-weight: bold;
+        font-size: 24px;
+        font-family:'YuGothic';
+      }
+      li {
+        margin-top: 10px;
+        list-style: none;
+        font-size: 36px;
+        line-height: 33px;
+      }
+      .download-inner-app{
+        display: -webkit-flex;
+        display: flex;
+        margin-top: 20px;
+      }
+    }
+  }
+  .main {
+    color: white;
+    width: 1020px;
+    height: 464px;
+    margin: 0 210px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .line{
+      margin-right: 21px;
+      padding-top: 60px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      text-decoration: none;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      li {
+        line-height: 14px;
+        margin-top: 16px;
+        font-size: 14px;
+        text-align: center;
+      }
+      .list{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+      }
+      h2 {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 24px;
+      }
+    }
+  }
+  .footer-logo {
+    margin-top: 40px;
+    height: 33px;
+    text-align: center;
+  }
+}
+  .copyright {
+    margin-top: 8px;
+    height: 14px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+  }
+
+.country-logo{
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+}
+
+.app-image {
+  width: 300px;
+  height: 262px;
+}
+
+.mercari-img {
+  height: 68px;
+  width: 68px;
+  margin-right: 24px;
+}
+
+.store-img {
+  width: 130px;
+  height: 40px;
+  margin-right: 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.store-img:hover{
+  opacity: 0.7;
+}
