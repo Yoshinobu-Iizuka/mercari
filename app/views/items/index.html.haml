@@ -1,7 +1,7 @@
 %body
   %header
     .header-inner
-      .header-top
+      .header-inner--top
         .logo
           %img{:alt => "mercari", :src => "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?817106341"}/
         .search-form.search-form-width
@@ -10,7 +10,7 @@
             %button
               %i.fas.fa-search.search-icon-size
       .header-bottom
-        .haeder-bottom-left
+        .header-bottom--left
           %ul.header-search-item.menu
             %li
               %a{:href => "#"} カテゴリーから探す
@@ -29,7 +29,7 @@
                   %a{:href => "#"} アディダス
                 %li
                   %a{:href => "#"} ブランド一覧
-        .haeder-bottom-right
+        .header-bottom--right
           %ul.links
             %li
               %a{:href => "#"}
@@ -512,4 +512,3 @@
     .put-item--inner
       %p 出品
       %i.fas.fa-camera.icon-camera
-  / </body>
