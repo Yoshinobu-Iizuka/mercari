@@ -1,42 +1,42 @@
 /* パーツ用 */
 .container {
-	display: block;
-	margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 .l-single-container {
-	display: inline-block;
-	margin: 0 auto;
-	width: 700px;
-	background-color: #ffffff;
+  display: inline-block;
+  margin: 0 auto;
+  width: 700px;
+  background-color: $bg-item-card-color;
 }
 .items-box {
-	max-width: 220px;
-	display: block;
+  max-width: 213px;
+  display: block;
 }
 .btn-small {
-	display: block;
+  display: block;
   margin: 0 auto;
-	max-width: 318px;
+  max-width: 318px;
   padding: 10px 0;
-	font-size: 14px;
-	border: 1px solid transparent;
-	cursor: pointer;
-	text-align: center;
-  background-color: $color_base-gray;
+  font-size: 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  background-color: $bg-color_base-gray;
 }
 .btn-large {
-	display: block;
+  display: block;
   margin: 0 auto;
-	max-width: 620px;
+  max-width: 620px;
   padding: 10px 0;
-	font-size: 14px;
-	border: 1px solid transparent;
-	cursor: pointer;
-	text-align: center;
-  background-color: $color_base-gray;
+  font-size: 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  background-color: $bg-color_base-gray;
 }
 .badge-num {
-	background-color: $color_red;
+  background-color: $bg-color_red;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -46,80 +46,83 @@
   color: #fff;
 }
 .item-button {
-	display: inline-block;
-	padding: 8px 16px;
-	border-radius: 40px;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 40px;
 }
 /* 微調整用 */
+.padding-left_15 {
+  padding-left: 15px;
+}
 .margin_0 {
-	margin: 0;
+  margin: 0;
 }
 .margin-top_0 {
-	margin-top: 0;
+  margin-top: 0;
 }
 .margin-top_10 {
-	margin-top: 10;
+  margin-top: 10;
 }
 .margin-top_20 {
-	margin-top: 20;
+  margin-top: 20;
 }
 .margin-top_30 {
-	margin-top: 30;
+  margin-top: 30;
 }
 .margin-top_40 {
-	margin-top: 40;
+  margin-top: 40;
 }
 .margin-top_50 {
-	margin-top: 50;
+  margin-top: 50;
 }
 .margin-left_0 {
-	margin-left: 0;
+  margin-left: 0;
 }
 .margin-left_5 {
-	margin-left: 5;
+  margin-left: 5;
 }
 .margin-left_10 {
-	margin-left: 10;
+  margin-left: 10;
 }
 .margin-left_15 {
-	margin-left: 15;
+  margin-left: 15;
 }
 .margin-left_20 {
-	margin-left: 20;
+  margin-left: 20;
 }
 .margin-left_25 {
-	margin-left: 25;
+  margin-left: 25;
 }
 .margin-left_30 {
-	margin-left: 30;
+  margin-left: 30;
 }
 .font-color_black {
-	color: $color_black;
+  color: $font-color_black;
 }
 .font-color_blue {
-	color: $color_blue;
+  color: $bg-color_blue;
 }
 .font-color_light-gray {
-	background-color: $color_blue;
+  background-color: $bg-color_blue;
 }
 .background-color_white {
-	background-color: #ffffff;
+  background-color: $font-color_white;
 }
 .background-color_red {
-	background-color: $color_red;
+  background-color: $bg-color_red;
 }
 .background-color_blue {
-	background-color: $color_blue;
+  background-color: $bg-color_blue;
 }
 .background-color_base-gray {
-	background-color: $color_base-gray;
+  background-color: $bg-color_base-gray;
 }
 .background-color_light-gray {
-	background-color: $color_light-gray;
+  background-color: $bg-color_light-gray;
 }
 .background-color_gray {
-	background-color: $color_gray;
+  background-color: $bg-color_gray;
 }
 .border-radius_4 {
-	border-radius: 4px;
+  border-radius: 4px;
 }
