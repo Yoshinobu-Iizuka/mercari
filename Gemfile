@@ -67,3 +67,7 @@ group :development, :test do
 end
 
 gem 'mini_magick'
+gem 'font-awesome-sass', '~> 5.4.1'
+gem 'haml-rails'
+gem 'erb2haml'
+gem "jquery-slick-rails"
