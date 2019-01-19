@@ -1,5 +1,5 @@
 header {
-  background-color: #ffffff;
+  background-color: $bg-header-color;
 }
 .search-form-width {
   width: calc(100% - (134px + 16px));
@@ -8,7 +8,7 @@ header {
   width: 1020px;
   margin: 0 auto;
   padding: 8px 0 0;
-  .header-top {
+  &--top {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,8 +27,8 @@ header {
         input {
           width: 100%;
           padding: 5px 0px 5px 8px;
-          background: #fafafa;
-          border: 1px solid #ccc;
+          background: $bg-seachform-color;
+          border: 1px solid $bg-seachform-border-color;
           font-size: 16px;
           border-radius: 4px;
           box-sizing: border-box;
@@ -39,7 +39,7 @@ header {
           top: 2px;
           right: 1px;
           padding: 6px;
-          background: #fafafa;
+          background: $bg-seachform-color;
           border-radius: 0 4px 4px 0;
           .search-icon-size {
             line-height: 20px;
@@ -55,7 +55,7 @@ header {
     display: flex;
     justify-content: space-between;
     margin-top: 8px;
-    .haeder-bottom-left {
+    &--left {
        display: flex;
        align-items: center;
       .header-search-item {
@@ -66,14 +66,14 @@ header {
           line-height: 32px;
           font-size: 14px;
           a {
-            color: #000000;
+            color: $font-color_black;
             text-decoration: none;
             display: block;
           }
         }
       }
     }
-    .haeder-bottom-right {
+    &--right {
       ul {
         padding: 0;
         margin: 0;
@@ -83,7 +83,7 @@ header {
           justify-content: center;
           align-items: center;
           a {
-            color: #000000;
+            color: $font-color_black;
             text-decoration: none;
             display: flex;
             justify-content: center;
@@ -129,39 +129,17 @@ ul.menu__second-level {
       line-height: 44px;
       padding: 0 0 0 15px;
       &:hover {
-        background: #ea352d;
-        color: #ffffff!important;
-      }
-    }
-  }
-}
-ul.menu__third-level {
-  visibility: hidden;
-  opacity: 0;
-  li {
-    border-top: 1px solid #111;
-    a:hover {
-      background: #2a1f1f;
-    }
-  }
-}
-ul.menu__fourth-level {
-  visibility: hidden;
-  opacity: 0;
-  li {
-    a {
-      &:hover {
-        background: #1d0f0f;
+        background: $bg-color_red;
+        color: $font-color_white!important;
       }
     }
   }
 }
 .menu > li:hover {
-  background: #ffffff;
+  background: $bg-header-color;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
-
 .menu > li.menu__single {
   position: relative;
 }
@@ -170,7 +148,7 @@ li.menu__single ul.menu__second-level {
   top: 40px;
   left: 0;
   width: 100%;
-  background: #ffffff;
+  background: $bg-header-color;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
