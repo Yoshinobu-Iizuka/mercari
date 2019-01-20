@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20190120103933) do
+ActiveRecord::Schema.define(version: 20190120104607) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "name",       limit: 65535
@@ -21,8 +20,6 @@ ActiveRecord::Schema.define(version: 20190120103933) do
     t.index ["item_id"], name: "index_brands_on_item_id", using: :btree
   end
 
-ActiveRecord::Schema.define(version: 20190120103303) do
-  
   create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "number",                null: false
     t.integer  "expiration_date_month", null: false
@@ -31,6 +28,20 @@ ActiveRecord::Schema.define(version: 20190120103303) do
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.index ["user_id"], name: "index_cards_on_user_id", using: :btree
+  end
+
+  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "before_comment", limit: 65535
+    t.text     "trade_comment",  limit: 65535
+    t.integer  "user_id"
+    t.integer  "item_id"
+    t.integer  "buyer_id"
+    t.integer  "trade_id"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["item_id"], name: "index_comments_on_item_id", using: :btree
+    t.index ["trade_id"], name: "index_comments_on_trade_id", using: :btree
+    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
   create_table "evaluations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -115,6 +126,9 @@ ActiveRecord::Schema.define(version: 20190120103303) do
 
   add_foreign_key "brands", "items"
   add_foreign_key "cards", "users"
+  add_foreign_key "comments", "items"
+  add_foreign_key "comments", "trades"
+  add_foreign_key "comments", "users"
   add_foreign_key "evaluations", "users"
   add_foreign_key "images", "items"
   add_foreign_key "items", "users"
