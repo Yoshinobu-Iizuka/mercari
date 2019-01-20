@@ -10,8 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190120103303) do
 
+ActiveRecord::Schema.define(version: 20190120103933) do
+
+  create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "name",       limit: 65535
+    t.integer  "item_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["item_id"], name: "index_brands_on_item_id", using: :btree
+  end
+
+ActiveRecord::Schema.define(version: 20190120103303) do
+  
   create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "number",                null: false
     t.integer  "expiration_date_month", null: false
@@ -102,6 +113,7 @@ ActiveRecord::Schema.define(version: 20190120103303) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "brands", "items"
   add_foreign_key "cards", "users"
   add_foreign_key "evaluations", "users"
   add_foreign_key "images", "items"
