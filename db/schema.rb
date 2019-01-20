@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190120102746) do
+ActiveRecord::Schema.define(version: 20190120103933) do
+
+  create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "name",       limit: 65535
+    t.integer  "item_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["item_id"], name: "index_brands_on_item_id", using: :btree
+  end
 
   create_table "cards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "number",                null: false
@@ -68,6 +76,17 @@ ActiveRecord::Schema.define(version: 20190120102746) do
     t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
   end
 
+  create_table "trades", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "deposit"
+    t.integer  "shipping_notification"
+    t.integer  "item_id"
+    t.integer  "user_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["item_id"], name: "index_trades_on_item_id", using: :btree
+    t.index ["user_id"], name: "index_trades_on_user_id", using: :btree
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "nickname",                            null: false
     t.string   "email",                  default: "", null: false
@@ -91,10 +110,13 @@ ActiveRecord::Schema.define(version: 20190120102746) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "brands", "items"
   add_foreign_key "cards", "users"
   add_foreign_key "evaluations", "users"
   add_foreign_key "images", "items"
   add_foreign_key "items", "users"
   add_foreign_key "likes", "items"
   add_foreign_key "likes", "users"
+  add_foreign_key "trades", "items"
+  add_foreign_key "trades", "users"
 end
