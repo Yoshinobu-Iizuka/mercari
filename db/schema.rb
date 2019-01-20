@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190120105916) do
+ActiveRecord::Schema.define(version: 20190120110430) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "name",       limit: 65535
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(version: 20190120105916) do
     t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "child_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name",        null: false
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_child_categories_on_category_id", using: :btree
   end
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -141,6 +149,7 @@ ActiveRecord::Schema.define(version: 20190120105916) do
 
   add_foreign_key "brands", "items"
   add_foreign_key "cards", "users"
+  add_foreign_key "child_categories", "categories"
   add_foreign_key "comments", "items"
   add_foreign_key "comments", "trades"
   add_foreign_key "comments", "users"
