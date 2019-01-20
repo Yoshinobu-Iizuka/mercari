@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190120105415) do
+ActiveRecord::Schema.define(version: 20190120105916) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "name",       limit: 65535
@@ -66,6 +66,15 @@ ActiveRecord::Schema.define(version: 20190120105415) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["item_id"], name: "index_images_on_item_id", using: :btree
+  end
+
+  create_table "item_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "item_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_item_categories_on_category_id", using: :btree
+    t.index ["item_id"], name: "index_item_categories_on_item_id", using: :btree
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -137,6 +146,8 @@ ActiveRecord::Schema.define(version: 20190120105415) do
   add_foreign_key "comments", "users"
   add_foreign_key "evaluations", "users"
   add_foreign_key "images", "items"
+  add_foreign_key "item_categories", "categories"
+  add_foreign_key "item_categories", "items"
   add_foreign_key "items", "users"
   add_foreign_key "likes", "items"
   add_foreign_key "likes", "users"
