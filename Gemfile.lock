@@ -41,6 +41,7 @@ GEM
     airbrussh (1.3.1)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (7.1.4)
+    bcrypt (3.1.12)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
@@ -74,15 +75,19 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.4)
     crass (1.0.4)
+    debug_inspector (0.0.3)
+    devise (4.5.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 6.0)
+      responders
+      warden (~> 1.2.3)
     erb2haml (0.1.5)
       html2haml
-    debug_inspector (0.0.3)
     erubis (2.7.0)
     excon (0.62.0)
     execjs (2.7.0)
     ffi (1.9.25)
-    font-awesome-rails (4.7.0.4)
-      railties (>= 3.2, < 6.0)
     fog-aws (3.3.0)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
@@ -99,6 +104,8 @@ GEM
     fog-xml (0.1.3)
       fog-core
       nokogiri (>= 1.5.11, < 2.0.0)
+    font-awesome-sass (5.4.1)
+      sassc (>= 1.11)
     formatador (0.2.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -126,6 +133,8 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jquery-slick-rails (1.9.0)
+      railties (>= 3.1)
     kgio (2.11.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -151,6 +160,7 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.10.0)
       mini_portile2 (~> 2.4.0)
+    orm_adapter (0.5.0)
     puma (3.12.0)
     rack (2.0.6)
     rack-test (0.6.3)
@@ -183,6 +193,9 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     ruby_parser (3.12.0)
       sexp_processor (~> 4.9)
     sass (3.7.3)
@@ -209,10 +222,10 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    temple (0.8.0)
     sshkit (1.18.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    temple (0.8.0)
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -226,6 +239,8 @@ GEM
     unicorn (5.4.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
+    warden (1.2.8)
+      rack (>= 2.0.6)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -247,12 +262,14 @@ DEPENDENCIES
   capistrano3-unicorn
   carrierwave
   coffee-rails (~> 4.2)
+  devise
   erb2haml
-  font-awesome-rails
-  haml-rails
   fog-aws
+  font-awesome-sass (~> 5.4.1)
+  haml-rails
   jbuilder (~> 2.5)
   jquery-rails
+  jquery-slick-rails
   listen
   mini_magick
   mysql2 (>= 0.3.18, < 0.5)
