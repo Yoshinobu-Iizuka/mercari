@@ -1,514 +1,467 @@
-%body
-  %header
-    .header-inner
-      .header-inner--top
-        .logo
-          %img{:alt => "mercari", :src => "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?817106341"}/
-        .search-form.search-form-width
-          %form
-            %input.search-form-width{:name => "search-item", :placeholder => "キーワードから探す", :type => "text"}/
-            %button
-              %i.fas.fa-search.search-icon-size
-      .header-bottom
-        .header-bottom--left
-          %ul.header-search-item.menu
-            %li
-              %a{:href => "#"} カテゴリーから探す
-            %li.menu__single.padding-left_15
-              %a.init-bottom{:href => "#"} ブランドから探す
-              %ul.menu__second-level
-                %li
-                  %a{:href => "#"} シャネル
-                %li
-                  %a{:href => "#"} ナイキ
-                %li
-                  %a{:href => "#"} ルイ ヴィトン
-                %li
-                  %a{:href => "#"} シュプリーム
-                %li
-                  %a{:href => "#"} アディダス
-                %li
-                  %a{:href => "#"} ブランド一覧
-        .header-bottom--right
-          %ul.links
-            %li
-              %a{:href => "#"}
-                %span
-                  %img{:alt => "", :src => "https://static-mercari-jp-imgtr2.akamaized.net/thumb/members/165510990.jpg?1526691293"}/
-                %p マイページ
-            %li
-              %a{:href => "#"}
-                %span.header-icon
-                  %i.far.fa-bell
-                %p お知らせ
-            %li
-              %a{:href => "#"}
-                %span.header-icon
-                  %i.fas.fa-check
-                %p やることリスト
-  / カルーセル
-  %div
-    .single-slider-item
-      %div
-        = link_to '#' do
-          = image_tag('banner-hajimeru-fortune.jpg', alt: 'mercari')
-      %div
-        = link_to '#' do
-          = image_tag('banner-featured-hobby.jpg', alt: 'mercari')
-      .top-banner.bg-image-room
-        .top-banner--inner.container
-          .left
-            %h2
-              スマホでかんたん
-              %br>/
-              フリマアプリ
-            %p
-              メルカリはスマホカメラからすぐに出品できる
-              %br>/
-              購入時も安心な独自システムのアプリです
-            .app-link
-              = link_to '#' do
-                = image_tag('app-store.svg', alt: 'appstore')
-              = link_to '#' do
-                = image_tag('google-play.svg', alt: 'googleplay')
-          .right
-            = image_tag('main_content_pc.png')
-      %div
-        = link_to '#' do
-          = image_tag('banner-bokurano-heisei-entertainment.png', alt: 'mercari')
-      %div
-        = link_to '#' do
-          = image_tag('banner-bokurano-heisei.jpg', alt: 'mercari')
-  / カルーセル
-  .pickup.container
-    %h2 ピックアップカテゴリー
-    %section.top-items.container
-      / 繰り返し
-      %h3= link_to 'レディース 新着アイテム', "#"
-      .item-line
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-      %p.link-to-all= link_to 'すべての商品を見る', "#"
-    %section.top-items.container
-      / 繰り返し
-      %h3= link_to 'メンズ 新着アイテム', "#"
-      .item-line
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-      %p.link-to-all= link_to 'すべての商品を見る', "#"
-    %section.top-items.container
-      / 繰り返し
-      %h3= link_to 'ベビー・キッズ 新着アイテム', "#"
-      .item-line
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-      %p.link-to-all= link_to 'すべての商品を見る', "#"
-    %section.top-items.container
-      / 繰り返し
-      %h3= link_to 'コスメ・香水・美容 新着アイテム', "#"
-      .item-line
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-      %p.link-to-all= link_to 'すべての商品を見る', "#"
-  .pickup.container
-    %h2 ピックアップブランド
-    %section.top-items.container
-      / 繰り返し
-      %h3= link_to 'シャネル 新着アイテム', "#"
-      .item-line
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-      %p.link-to-all= link_to 'すべての商品を見る', "#"
-    %section.top-items.container
-      / 繰り返し
-      %h3= link_to 'ルイ ヴィトン 新着アイテム', "#"
-      .item-line
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-      %p.link-to-all= link_to 'すべての商品を見る', "#"
-    %section.top-items.container
-      / 繰り返し
-      %h3= link_to 'シュプリーム 新着アイテム', "#"
-      .item-line
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-      %p.link-to-all= link_to 'すべての商品を見る', "#"
-    %section.top-items.container
-      / 繰り返し
-      %h3= link_to 'ナイキ 新着アイテム', "#"
-      .item-line
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-        = link_to '#' do
-          .items-box
-            %figure.items-box--image
-              = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-            .item--caption
-              %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-              %div
-                %p.price ¥ 800
-                %p.like
-                  %i.far.fa-heart.like-icon>
-                  1
-              %p (税込)
-      %p.link-to-all= link_to 'すべての商品を見る', "#"
-  = link_to '#',class: "background-color_red put-item" do
-    .put-item--inner
-      %p 出品
-      %i.fas.fa-camera.icon-camera
+= render partial: "layouts/header"
+/ カルーセル
+%div
+  .single-slider-item
+    %div
+      = link_to '#' do
+        = image_tag('banner-hajimeru-fortune.jpg', alt: 'mercari')
+    %div
+      = link_to '#' do
+        = image_tag('banner-featured-hobby.jpg', alt: 'mercari')
+    .top-banner.bg-image-room
+      .top-banner--inner.container
+        .left
+          %h2
+            スマホでかんたん
+            %br>/
+            フリマアプリ
+          %p
+            メルカリはスマホカメラからすぐに出品できる
+            %br>/
+            購入時も安心な独自システムのアプリです
+          .app-link
+            = link_to '#' do
+              = image_tag('app-store.svg', alt: 'appstore')
+            = link_to '#' do
+              = image_tag('google-play.svg', alt: 'googleplay')
+        .right
+          = image_tag('main_content_pc.png')
+    %div
+      = link_to '#' do
+        = image_tag('banner-bokurano-heisei-entertainment.png', alt: 'mercari')
+    %div
+      = link_to '#' do
+        = image_tag('banner-bokurano-heisei.jpg', alt: 'mercari')
+/ カルーセル
+.pickup.container
+  %h2 ピックアップカテゴリー
+  %section.top-items.container
+    / 繰り返し
+    %h3= link_to 'レディース 新着アイテム', "#"
+    .item-line
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+    %p.link-to-all= link_to 'すべての商品を見る', "#"
+  %section.top-items.container
+    / 繰り返し
+    %h3= link_to 'メンズ 新着アイテム', "#"
+    .item-line
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+    %p.link-to-all= link_to 'すべての商品を見る', "#"
+  %section.top-items.container
+    / 繰り返し
+    %h3= link_to 'ベビー・キッズ 新着アイテム', "#"
+    .item-line
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+    %p.link-to-all= link_to 'すべての商品を見る', "#"
+  %section.top-items.container
+    / 繰り返し
+    %h3= link_to 'コスメ・香水・美容 新着アイテム', "#"
+    .item-line
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+    %p.link-to-all= link_to 'すべての商品を見る', "#"
+.pickup.container
+  %h2 ピックアップブランド
+  %section.top-items.container
+    / 繰り返し
+    %h3= link_to 'シャネル 新着アイテム', "#"
+    .item-line
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+    %p.link-to-all= link_to 'すべての商品を見る', "#"
+  %section.top-items.container
+    / 繰り返し
+    %h3= link_to 'ルイ ヴィトン 新着アイテム', "#"
+    .item-line
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+    %p.link-to-all= link_to 'すべての商品を見る', "#"
+  %section.top-items.container
+    / 繰り返し
+    %h3= link_to 'シュプリーム 新着アイテム', "#"
+    .item-line
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+    %p.link-to-all= link_to 'すべての商品を見る', "#"
+  %section.top-items.container
+    / 繰り返し
+    %h3= link_to 'ナイキ 新着アイテム', "#"
+    .item-line
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+      = link_to '#' do
+        .items-box
+          %figure.items-box--image
+            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          .item--caption
+            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+            %div
+              %p.price ¥ 800
+              %p.like
+                %i.far.fa-heart.like-icon
+                1
+            %p (税込)
+    %p.link-to-all= link_to 'すべての商品を見る', "#"
+= link_to '#',class: "background-color_red put-item" do
+  .put-item--inner
+    %p 出品
+    %i.fas.fa-camera.icon-camera
