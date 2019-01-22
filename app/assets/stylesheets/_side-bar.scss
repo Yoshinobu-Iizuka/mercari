@@ -7,17 +7,17 @@
       .mypage-nav-list_head {
         text-decoration: none;
         background-color: #DDDDDD;
-        color: $color_black;
+        color: $font-color_black;
         display: block;
         position: relative;
         padding: 12px 16px;
-        font-weight: 600;
-        .angle-right_icon {
+        font-weight: 500;
+        font-size: 14px;
+        .fa-angle-right {
           position: absolute;
           top: 25%;
-          font-weight: 400;
           right: 16px;
-          font-size: 25px;
+          font-size: 20px;
         }
       }
       .mypage-nav-list_item {
@@ -26,33 +26,43 @@
         position: relative;
         padding: 12px 16px;
         background-color: #fff;
-        color: $color_black;
+        color: $font-color_black;
+        font-size: 14px;
         &:hover {
           background-color: #eee;
         }
         .badge-num{
           position: absolute;
-          top: 30%;
+          top: 25%;
           right: 32px;
         }
-        .angle-right_icon {
+        .fa-angle-right {
           position: absolute;
           top: 25%;
-          font-weight: 400;
           right: 16px;
-          font-size: 25px;
+          font-size: 20px;
           color: #ccc;
-          &:hover {
-            right: -5px;
-          }
         }
       }
     }
   }
+  //各メニューの間の確保
   .mypage-nav-head {
     margin: 40px 0 0;
     +.mypage-nav-list {
       margin: 8px 0 0;
     }
   }
+  //ホバーすると矢印が動く
+  .mypage-nav-list_item:hover > .fa-angle-right:before {
+    color: #333;
+    position: absolute;
+    right: -5px;
+    transition: right 3s;
+  }
+  .mypage-nav-list_head:hover > .fa-angle-right:before {
+    position: absolute;
+    right: -5px;
+  }
 }
+
