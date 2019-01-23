@@ -1,0 +1,51 @@
+<%= render partial: "layouts/users_header" %>
+<section>
+  <div class="l-single-container signup-title">
+    <h2>購入を確定しますか？</h2>
+  </div>
+  <div class="l-single-container buy-confirm">
+    <div class="buy-confirm--image">
+      <%= image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル') %>
+    </div>
+    <h3 class="item-title">ショートパンツ</h3>
+    <div class="buy-confirm--price">
+      <p class="price">¥ 9,999,999</p>
+      <p class="item-shipping-fee">着払い</p>
+    </div>
+    <div class="buy-confirm--btn">
+      <%= link_to 'ポイントはありません', '#', class: 'btn-small background-color_btn-gray' %>
+    </div>
+    <div class="final-confirm-price">
+      <p class="final-confirm-price--title">支払い金額</p>
+      <p class="final-confirm-price--price">¥ 9,999,999</p>
+    </div>
+    <div class="buy-confirm--btn">
+      <%= link_to '購入する', '#', class: 'btn-small background-color_red buy-btn' %>
+    </div>
+  </div>
+  <div class="l-single-container buy-confirm">
+    <div class="buy-user-info">
+      <h3 class="buy-user-info--title">配送先</h3>
+      <p class="buy-user-info--postnum">165-0000</p>
+      <p>東京都中野区中野中野10-10 メルカリハイツ</p>
+      <p>庄司 美雪</p>
+    </div>
+    <p class="user-info-edit">
+      <%= link_to "変更する",'#', class: 'blue-link mark-next' %>
+    </p>
+  </div>
+  <div class="l-single-container buy-confirm">
+    <div class="buy-user-info user-payment">
+      <h3 class="buy-user-info--title">支払い方法</h3>
+      <p>************0000</p>
+      <p>04 / 28</p>
+      <p class="card-logo">
+        <%= image_tag('card-logo-jcb.svg', alt: 'JCB') %>
+      </p>
+    </div>
+    <p class="user-info-edit">
+      <%= link_to "変更する",'#', class: 'blue-link mark-next' %>
+    </p>
+  </div>
+</section>
+<%= render partial: "layouts/users_footer" %>
