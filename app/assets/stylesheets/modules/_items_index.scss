@@ -111,63 +111,6 @@
       color: #000000;
       text-decoration: none;
       display: inline-block;
-      .items-box {
-        background-color: #ffffff;
-        &--image {
-          max-height: 213px;
-          margin: 0;
-          padding: 0;
-          img {
-            width: 100%;
-            width: 213px;
-            height: 213px;
-            object-fit: cover;
-          }
-        }
-        .item--caption {
-          padding: 18px 16px 8px;
-          h4 {
-            text-align: left;
-            font-weight: 400;
-            word-break: break-word;
-            overflow: hidden;
-            height: 3em;
-            position: relative;
-            &::after {
-              content: '';
-              display: block;
-              width: 50%;
-              height: 1.5em;
-              position: absolute;
-              bottom: 0;
-              right: 0;
-              background: linear-gradient(to right, rgba(255,255,255,0), #fff 72%);
-            }
-          }
-          div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 8px;
-            line-height: 18px;
-            .price {
-              font-size: 18px;
-              font-weight: bold;
-            }
-            .like {
-              font-size: 16px;
-              .like-icon {
-                margin-right: 4px;
-                color: gray;
-              }
-            }
-          }
-          p {
-            font-size: 10px;
-            text-align: left;
-          }
-        }
-      }
     }
   }
   .link-to-all {
@@ -181,6 +124,63 @@
         text-decoration: underline;
         opacity: 0.5;
       }
+    }
+  }
+}
+.items-box {
+  background-color: #ffffff;
+  &--image {
+    max-height: 213px;
+    margin: 0;
+    padding: 0;
+    img {
+      width: 100%;
+      width: 213px;
+      height: 213px;
+      object-fit: cover;
+    }
+  }
+  .item--caption {
+    padding: 18px 16px 8px;
+    h4 {
+      text-align: left;
+      font-weight: 400;
+      word-break: break-word;
+      overflow: hidden;
+      height: 3em;
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 1.5em;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(to right, rgba(255,255,255,0), #fff 72%);
+      }
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      line-height: 18px;
+      .price {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .like {
+        font-size: 16px;
+        .like-icon {
+          margin-right: 4px;
+          color: gray;
+        }
+      }
+    }
+    p {
+      font-size: 10px;
+      text-align: left;
     }
   }
 }
