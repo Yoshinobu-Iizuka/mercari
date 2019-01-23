@@ -1,0 +1,36 @@
+= render partial: "layouts/users_header"
+%section
+  .l-single-container.signup-title
+    %h2 購入を確定しますか？
+  .l-single-container.buy-confirm
+    .buy-confirm--image
+      = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+    %h3.item-title ショートパンツ
+    .buy-confirm--price
+      %p.price ¥ 9,999,999
+      %p.item-shipping-fee 着払い
+    .buy-confirm--btn
+      = link_to 'ポイントはありません', '#', class: 'btn-small background-color_btn-gray'
+    .final-confirm-price
+      %p.final-confirm-price--title 支払い金額
+      %p.final-confirm-price--price ¥ 9,999,999
+    .buy-confirm--btn
+      = link_to '購入する', '#', class: 'btn-small background-color_red buy-btn'
+  .l-single-container.buy-confirm
+    .buy-user-info
+      %h3.buy-user-info--title 配送先
+      %p.buy-user-info--postnum 165-0000
+      %p 東京都中野区中野中野10-10 メルカリハイツ
+      %p 庄司 美雪
+    %p.user-info-edit
+      = link_to "変更する",'#', class: 'blue-link mark-next'
+  .l-single-container.buy-confirm
+    .buy-user-info.user-payment
+      %h3.buy-user-info--title 支払い方法
+      %p ************0000
+      %p 04 / 28
+      %p.card-logo
+        = image_tag('card-logo-jcb.svg', alt: 'JCB')
+    %p.user-info-edit
+      = link_to "変更する",'#', class: 'blue-link mark-next'
+= render partial: "layouts/users_footer"

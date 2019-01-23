@@ -101,7 +101,7 @@
   color: $bg-color_blue;
 }
 .font-color_light-gray {
-  background-color: $bg-color_blue;
+  background-color: $bg-color_light-gray;
 }
 .background-color_white {
   background-color: $font-color_white;
@@ -121,9 +121,13 @@
 .background-color_gray {
   background-color: $bg-color_gray;
 }
+.background-color_btn-gray {
+  background-color: $bg-seachform-border-color;
+}
 .border-radius_4 {
   border-radius: 4px;
 }
 .text-align_left {
   text-align: left;
 }
+
