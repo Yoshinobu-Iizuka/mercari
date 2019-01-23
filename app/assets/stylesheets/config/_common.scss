@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 .l-single-container {
-  display: inline-block;
+  display: block;
   margin: 0 auto;
   width: 700px;
   background-color: $bg-item-card-color;
@@ -20,7 +20,6 @@
   padding: 10px 0;
   font-size: 14px;
   border: 1px solid transparent;
-  cursor: pointer;
   text-align: center;
   background-color: $bg-color_base-gray;
 }
@@ -31,7 +30,6 @@
   padding: 10px 0;
   font-size: 14px;
   border: 1px solid transparent;
-  cursor: pointer;
   text-align: center;
   background-color: $bg-color_base-gray;
 }
@@ -61,40 +59,40 @@
   margin-top: 0;
 }
 .margin-top_10 {
-  margin-top: 10;
+  margin-top: 10px;
 }
 .margin-top_20 {
-  margin-top: 20;
+  margin-top: 20px;
 }
 .margin-top_30 {
-  margin-top: 30;
+  margin-top: 30px;
 }
 .margin-top_40 {
-  margin-top: 40;
+  margin-top: 40px;
 }
 .margin-top_50 {
-  margin-top: 50;
+  margin-top: 50px;
 }
 .margin-left_0 {
   margin-left: 0;
 }
 .margin-left_5 {
-  margin-left: 5;
+  margin-left: 5px;
 }
 .margin-left_10 {
-  margin-left: 10;
+  margin-left: 10px;
 }
 .margin-left_15 {
-  margin-left: 15;
+  margin-left: 15px;
 }
 .margin-left_20 {
-  margin-left: 20;
+  margin-left: 20px;
 }
 .margin-left_25 {
-  margin-left: 25;
+  margin-left: 25px;
 }
 .margin-left_30 {
-  margin-left: 30;
+  margin-left: 30px;
 }
 .font-color_black {
   color: $font-color_black;
@@ -125,4 +123,7 @@
 }
 .border-radius_4 {
   border-radius: 4px;
+}
+.text-align_left {
+  text-align: left;
 }

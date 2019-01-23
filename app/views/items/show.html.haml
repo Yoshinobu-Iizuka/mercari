@@ -1,0 +1,226 @@
+= render partial: "layouts/header"
+%section
+  .l-single-container.item-card-details
+    %h2 ショートパンツ
+    .item-card-details--top
+      .item-image
+        .item-image--main
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+        .item-image--sub
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+      .item-table
+        %table
+          %tr
+            %th 出品者
+            %td
+              = link_to 'ユーザ名', "#"
+              %br/
+              .user-rating
+                %span
+                  %i.fas.fa-laugh.icon-face-good
+                  110
+                %span
+                  %i.fas.fa-meh.icon-face-normal
+                  10
+                %span
+                  %i.fas.fa-frown.icon-face-bad
+                  15
+          %tr
+            %th カテゴリー
+            %td.line-height_17
+              = link_to 'レディース', "#"
+              %br/
+              %span.child-category
+                = link_to '中カテゴリ', "#"
+              %br/
+              %span.child-category
+                = link_to '小カテゴリ', "#"
+          %tr
+            %th ブランド
+            %td
+              = link_to 'ブランド', "#"
+          %tr
+            %th 商品のサイズ
+            %td FREE SIZE
+          %tr
+            %th 商品の状態
+            %td 目立った傷や汚れなし
+          %tr
+            %th 配送料の負担
+            %td 送料込み(出品者負担)
+          %tr
+            %th 発送の方法
+            %td 未定
+          %tr
+            %th 発送元地域
+            %td
+              = link_to '宮城県', "#"
+          %tr
+            %th 発送日の目安
+            %td 1~2日で発送
+    .item-card-details--price
+      %span.item-price ¥ 9,999,999
+      %span.item-tax (税込)
+      %span.item-shipping-fee 送料込み
+    .btn-buy.btn-large.background-color_red
+      = link_to '購入画面に進む', "#"
+    .item-card-details--comment
+      %p フリーサイズです。命に比べたら安いと思います。買ってください。ああああああああああああ
+    .item-button-container
+      .item-btn
+        %button.like.item-button{type: "button"}
+          %i.far.fa-heart.icon-like
+          %span いいね!
+          %span 20
+        %button.spam.item-button{type: "button"}
+          %i.far.fa-flag.icon-flag
+          %span 不適切な商品の報告
+      %p.safe
+        = link_to "#", class: 'blue-link' do
+          %i.fas.fa-lock
+          %span あんしん・あんぜんへの取り組み
+%section
+  .l-single-container.message-content
+    %form.container{action: "", method: ""}
+      %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %textarea{name: ""}
+      %button.message-submit.btn-large{type: "submit"} コメントする
+%section
+  .item-link-area
+    %span.prev-item
+      = link_to '前のアイテム前のアイテム前のアイテム前のアイテム前のアイテム前のアイテム前のアイテム', "#", class: 'blue-link'
+    %span.next-item
+      = link_to '次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム', "#", class: 'blue-link'
+%section
+  .l-single-container.sns-area
+    = link_to "#" do
+      %span.shere-facebook
+        %i.fab.fa-facebook-square
+    = link_to "#" do
+      %span.shere-twitter
+        %i.fab.fa-twitter
+    = link_to "#" do
+      %span.shere-pinterest
+        %i.fab.fa-pinterest
+%section.top-items.container.margin-top_40
+  %h3.text-align_left.users-item-head
+    = link_to 'ユーザさんのその他の出品', "#", class: 'blue-link'
+  .item-line-detail.item-line.container
+    = link_to '#' do
+      .items-box
+        %figure.items-box--image
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+        .item--caption
+          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %div
+            %p.price ¥ 800
+            %p.like
+              %i.far.fa-heart.like-icon 1
+          %p (税込)
+    = link_to '#' do
+      .items-box
+        %figure.items-box--image
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+        .item--caption
+          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %div
+            %p.price ¥ 800
+            %p.like
+              %i.far.fa-heart.like-icon 1
+          %p (税込)
+    = link_to '#' do
+      .items-box
+        %figure.items-box--image
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+        .item--caption
+          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %div
+            %p.price ¥ 800
+            %p.like
+              %i.far.fa-heart.like-icon 1
+          %p (税込)
+  .item-line-detail.item-line.container
+    = link_to '#' do
+      .items-box
+        %figure.items-box--image
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+        .item--caption
+          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %div
+            %p.price ¥ 800
+            %p.like
+              %i.far.fa-heart.like-icon 1
+          %p (税込)
+    = link_to '#' do
+      .items-box
+        %figure.items-box--image
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+        .item--caption
+          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %div
+            %p.price ¥ 800
+            %p.like
+              %i.far.fa-heart.like-icon 1
+          %p (税込)
+%section.top-items.container.margin-top_40.last-contents
+  %h3.text-align_left.users-item-head
+    = link_to 'その他の出品', "#", class: 'blue-link'
+  .item-line-detail.item-line.container
+    = link_to '#', class: 'sold-out' do
+      .items-box
+        %figure.items-box--image
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+        .item--caption
+          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %div
+            %p.price ¥ 800
+            %p.like
+              %i.far.fa-heart.like-icon 1
+          %p (税込)
+    = link_to '#' do
+      .items-box
+        %figure.items-box--image
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+        .item--caption
+          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %div
+            %p.price ¥ 800
+            %p.like
+              %i.far.fa-heart.like-icon 1
+          %p (税込)
+    = link_to '#' do
+      .items-box
+        %figure.items-box--image
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+        .item--caption
+          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %div
+            %p.price ¥ 800
+            %p.like
+              %i.far.fa-heart.like-icon 1
+          %p (税込)
+  .item-line-detail.item-line.container
+    = link_to '#' do
+      .items-box
+        %figure.items-box--image
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+        .item--caption
+          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %div
+            %p.price ¥ 800
+            %p.like
+              %i.far.fa-heart.like-icon 1
+          %p (税込)
+    = link_to '#' do
+      .items-box
+        %figure.items-box--image
+          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+        .item--caption
+          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %div
+            %p.price ¥ 800
+            %p.like
+              %i.far.fa-heart.like-icon 1
+          %p (税込)
