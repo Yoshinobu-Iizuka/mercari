@@ -10,14 +10,14 @@
   background-color: $bg-item-card-color;
 }
 .items-box {
-  max-width: 213px;
+  width: 213px;
   display: block;
 }
 .btn-small {
   display: block;
   margin: 0 auto;
-  max-width: 318px;
-  padding: 10px 0;
+  width: 318px;
+  line-height: 48px;
   font-size: 14px;
   border: 1px solid transparent;
   text-align: center;
@@ -26,7 +26,7 @@
 .btn-large {
   display: block;
   margin: 0 auto;
-  max-width: 620px;
+  width: 620px;
   padding: 10px 0;
   font-size: 14px;
   border: 1px solid transparent;
