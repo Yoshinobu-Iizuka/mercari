@@ -1,0 +1,111 @@
+.user-sign-up-header {
+  background-color: $bg-color_base-gray;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  &--logo {
+    width: 185px;
+    display: inline-block;
+    a {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.signup-title {
+  text-align: center;
+  padding: 32px 0;
+  border-bottom: 1px solid $bg-color_base-gray;
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+.user-action-btn {
+  padding: 64px 0;
+  a {
+    text-decoration: none;
+    color: $font-color_black;
+  }
+  a + a {
+    margin-top: 10px;
+  }
+}
+.signup--mail {
+  background-color: $basic-btn-color;
+  position: relative;
+  .icon-mail {
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+    color: $bg-seachform-border-color;
+  }
+}
+.signup--facebook {
+  background-color: $facebook-color;
+  color: $font-color_white;
+  position: relative;
+  .icon-facebook {
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+  }
+}
+.signup--google {
+  background-color: $google-color;
+  color: $font-color_white;
+  position: relative;
+  .icon-googleplus {
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+  }
+}
+.user-sign-up--footer {
+  height: auto;
+  padding: 40px 0;
+  background-color: $bg-color_base-gray;
+  ul {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    li + li {
+      margin-left: 15px;
+    }
+    li {
+      font-size: 12px;
+      line-height: 12px;
+      a {
+        color: $font-color_black;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+          opacity: .7;
+        }
+      }
+    }
+  }
+  .footer-logo--signup {
+    width: 80px;
+    margin-top: 40px;
+    a {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+    p {
+      font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+}
