@@ -1,0 +1,120 @@
+.buy-confirm {
+  text-align: center;
+  padding: 24px 0 40px;
+  &--image {
+    width: 148px;
+    height: 148px;
+    margin: 0 auto;
+    img {
+      width: 148px;
+      height: 148px;
+      object-fit: cover;
+    }
+  }
+  .item-title {
+    line-height: 1.5;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  &--price {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+    .price {
+      font-size: 22px;
+      line-height: 22px;
+      font-weight: bold;
+    }
+    .item-shipping-fee {
+      margin: 0 0 0 10px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  &--btn {
+    margin-top: 20px;
+    a {
+      text-decoration: none;
+      color: $font-color_black;
+    }
+    .buy-btn {
+      color: $font-color_white;
+      font-weight: bold;
+      margin: 32px auto 0;
+    }
+  }
+  .final-confirm-price {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    align-items: center;
+    margin: 16px auto;
+    &--title {
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: bold;
+    }
+    &--price {
+      font-size: 22px;
+      line-height: 22px;
+      font-weight: bold;
+    }
+  }
+}
+.buy-confirm + .buy-confirm {
+  border-top: 1px solid $bg-color_base-gray;
+}
+.buy-user-info {
+  width: 320px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 auto;
+  &--title {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  &--postnum {
+    position: relative;
+    padding: 0 0 0 15px;
+    font-size: 12px;
+    &::before {
+      content: '\03012';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+.user-info-edit {
+  width: 320px;
+  margin: 0 auto;
+  text-align: right;
+  font-size: 14px;
+  line-height: 14px;
+}
+.mark-next {
+  position: relative;
+  padding: 0 15px 0 0;
+  &::after {
+    content: '>';
+    position: absolute;
+    top: -1px;
+    right: 0;
+  }
+}
+.user-payment {
+  p {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  }
+  .card-logo {
+    width: 26px;
+    img {
+      width: 100%;
+    }
+  }
+}
