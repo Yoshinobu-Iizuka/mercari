@@ -10,14 +10,14 @@
   background-color: $bg-item-card-color;
 }
 .items-box {
-  max-width: 213px;
+  width: 213px;
   display: block;
 }
 .btn-small {
   display: block;
   margin: 0 auto;
-  max-width: 318px;
-  padding: 10px 0;
+  width: 318px;
+  line-height: 48px;
   font-size: 14px;
   border: 1px solid transparent;
   text-align: center;
@@ -26,7 +26,7 @@
 .btn-large {
   display: block;
   margin: 0 auto;
-  max-width: 620px;
+  width: 620px;
   padding: 10px 0;
   font-size: 14px;
   border: 1px solid transparent;
@@ -101,7 +101,7 @@
   color: $bg-color_blue;
 }
 .font-color_light-gray {
-  background-color: $bg-color_blue;
+  background-color: $bg-color_light-gray;
 }
 .background-color_white {
   background-color: $font-color_white;
@@ -121,9 +121,13 @@
 .background-color_gray {
   background-color: $bg-color_gray;
 }
+.background-color_btn-gray {
+  background-color: $bg-seachform-border-color;
+}
 .border-radius_4 {
   border-radius: 4px;
 }
 .text-align_left {
   text-align: left;
 }
+

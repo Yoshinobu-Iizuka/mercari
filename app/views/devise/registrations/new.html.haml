@@ -1,0 +1,15 @@
+= render partial: "layouts/users_header"
+%section
+  .l-single-container.signup-title
+    %h2 新規会員登録
+  .l-single-container.user-action-btn
+    = link_to "#", class: 'btn-small signup--mail' do
+      %i.far.fa-envelope.icon-mail
+      メールアドレスで登録
+    = link_to "#", class: 'btn-small signup--facebook' do
+      %i.fab.fa-facebook.icon-facebook
+      facebookで登録
+    = link_to "#", class: 'btn-small signup--google' do
+      %i.fab.fa-google-plus-g.icon-googleplus
+      Googleで登録
+= render partial: "layouts/users_footer"
