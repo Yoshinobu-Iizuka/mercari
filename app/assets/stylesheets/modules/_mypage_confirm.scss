@@ -26,38 +26,6 @@
         font-size: 14px;
         font-weight: bold;
       }
-      .require {
-        position: relative;
-        &::after {
-          content: '必須';
-          display: inline-block;
-          font-size: 11px;
-          line-height: 18px;
-          padding: 0 4px;
-          border-radius: 2px;
-          color: $font-color_white;
-          background-color: $bg-color_red;
-          position: absolute;
-          top: -3px;
-          right: -40px;
-        }
-      }
-      .option {
-        position: relative;
-        &::after {
-          content: '任意';
-          display: inline-block;
-          font-size: 11px;
-          line-height: 18px;
-          padding: 0 4px;
-          border-radius: 2px;
-          color: $font-color_white;
-          background-color: $bg-seachform-border-color;
-          position: absolute;
-          top: -3px;
-          right: -40px;
-        }
-      }
       input {
         padding: 10px 16px 8px;
         border-radius: 4px;
@@ -151,5 +119,37 @@
       top: 0;
       right: -10px;
     }
+  }
+}
+.require {
+  position: relative;
+  &::after {
+    content: '必須';
+    display: inline-block;
+    font-size: 11px;
+    line-height: 18px;
+    padding: 0 4px;
+    border-radius: 2px;
+    color: $font-color_white;
+    background-color: $bg-color_red;
+    position: absolute;
+    top: -3px;
+    right: -40px;
+  }
+}
+.option {
+  position: relative;
+  &::after {
+    content: '任意';
+    display: inline-block;
+    font-size: 11px;
+    line-height: 18px;
+    padding: 0 4px;
+    border-radius: 2px;
+    color: $font-color_white;
+    background-color: $bg-seachform-border-color;
+    position: absolute;
+    top: -3px;
+    right: -40px;
   }
 }
