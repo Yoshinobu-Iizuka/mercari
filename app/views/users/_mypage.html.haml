@@ -1,0 +1,111 @@
+.l-content
+  .mypage-user-icon
+    %a.user-icon{:href => "/users"}
+      .user-thumb
+        %img{:src => "https://mcdn.mercariapp.com/images/member_photo_noimage_thumb.png", :alt => "プロフィール"}
+      %h2.user-name
+        名無し
+      .mypage-number
+        %div
+          評価
+          %span.review-num
+            0
+        %div
+          出品数
+          %span.item-num
+            0
+  .mypage-notification-todo
+    .mypage-tabs
+      %ul
+        %li.tab-notification
+          %h3
+            %a{:href => ""}
+              お知らせ
+        %li.tab-todo
+          %h3
+            %a{:href => ""}
+              やることリスト
+    .tab-contents
+      %ul.mypage-tab-notification.active
+        %li
+          %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/point/"}
+            %img{:src => "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"}
+            .mypage-item-body
+              .mypage-item-text
+                明日、600ポイントの有効期限が切れます
+              .mypage-item-time
+                %i.fas.fa-clock.icon-time
+                %span
+                  13時間前
+            %i.fas.fa-angle-right
+        %li
+          %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/point/"}
+            %img{:src => "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"}
+            .mypage-item-body
+              .mypage-item-text
+                メッセージが届いてるよ！
+              .mypage-item-time
+                %i.fas.fa-clock.icon-time
+                %span
+                  1日前
+            %i.fas.fa-angle-right
+        %li
+          %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/point/"}
+            %img{:src => "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"}
+            .mypage-item-body
+              .mypage-item-text
+                メッセージが届いてるよ！
+              .mypage-item-time
+                %i.fas.fa-clock.icon-time
+                %span
+                  2日前
+            %i.fas.fa-angle-right
+        %li
+          %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/point/"}
+            %img{:src => "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"}
+            .mypage-item-body
+              .mypage-item-text
+                メッセージが届いてるよ！
+              .mypage-item-time
+                %i.fas.fa-clock.icon-time
+                %span
+                  一週間前
+            %i.fas.fa-angle-right
+        %li
+          %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/point/"}
+            %img{:src => "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"}
+            .mypage-item-body
+              .mypage-item-text
+                メッセージが届いてるよ！
+              .mypage-item-time
+                %i.fas.fa-clock.icon-time
+                %span
+                  1ヶ月前
+            %i.fas.fa-angle-right
+        %li.mypage-go-list
+          %a{:href => "mypage/notification"}
+            一覧を見る
+      %ul.mypage-tab-todo
+        %li.mypage-item-nolist
+          現在、やることリストはありません
+
+  .mypage-tab-history
+    %h2.mypage-tab-history__head
+      購入した商品
+    .mypage-tabs
+      %ul
+        %li.dealing
+          %h3
+            %a{:href => ""}
+              取引中
+        %li.done
+          %h3
+            %a{:href => ""}
+              過去の取引
+    .tab-contents
+      %ul.dealing-detail
+        %li.mypage-item-nolist
+          取引中の商品がありません
+      %ul.done-detail
+        %li.mypage-item-nolist
+          過去の取引はありません
