@@ -11,13 +11,13 @@
 .l-content {
   float: right;
   width: 700px;
-  .mypage-user-icon {
+  .mypage-user {
     position: relative;
     background: url("user-bg.jpg");
     padding: 20px;
     height: 160px;
     text-align: center;
-    .user-icon {
+    &__icon {
       display: block;
       position: absolute;
       top: 0;
@@ -29,7 +29,7 @@
       &:hover{
         opacity: 0.5;
       }
-      .user-thumb {
+      &--thumb {
         overflow: hidden;
         width: 60px;
         height: 60px;
@@ -45,16 +45,15 @@
         font-size: 14px;
         font-weight: bold;
       }
-      .mypage-number {
-        margin: 8px 0 0;
-
-        div {
-          display: inline-block;
-          font-size: 14px;
-        }
-        div + div {
-          margin: 0 0 0 16px;
-        }
+    }
+    &__number {
+      margin: 8px 0 0;
+      div {
+        display: inline-block;
+        font-size: 14px;
+      }
+      div + div {
+        margin: 0 0 0 16px;
       }
     }
   }
@@ -86,34 +85,35 @@
 
     .tab-contents {
       display: block;
-      .mypage-tab-notification.active {
+      .mypage-tab-notification {
         li {
           border-bottom: 1px solid #eee;
           position: relative;
-          a.mypage-item-link {
-            display: block;
-            min-height: 48px;
-            padding: 16px;
-            font-size: 14px;
-            text-decoration: none;
-            &:hover {
-              background-color: #eee;
+        }
+        &__item {
+          display: block;
+          min-height: 48px;
+          padding: 16px;
+          font-size: 14px;
+          text-decoration: none;
+          &:hover {
+            background-color: #eee;
+          }
+          img {
+            width: 48px;
+            float: left;
+          }
+          &--body {
+            margin: 0 40px 0 68px;
+            color: #333;
+            &--text {
+              max-height: 4.4em;
+              line-height: 15px;
             }
-            img {
-              width: 48px;
-              float: left;
+            &--time {
+              color: #888;
             }
-            .mypage-item-body {
-              margin: 0 40px 0 68px;
-              color: #333;
-              .mypage-item-text {
-                max-height: 4.4em;
-                line-height: 15px;
-              }
-              .mypage-item-time {
-                color: #888;
-              }
-            }
+          }
             .fa-angle-right {
               position: absolute;
               top: 40%;
@@ -122,7 +122,7 @@
               color: #333;
             }
           }
-        }
+
         .mypage-go-list {
           display: block;
           margin: 0 auto;
@@ -164,7 +164,7 @@
       line-height: 72px;
       font-weight: bold;
     }
-    .mypage-tabs {
+    &__body {
       background-color: #eee;
       font-size: 0;
       li {

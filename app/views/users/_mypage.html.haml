@@ -1,11 +1,11 @@
 .l-content
-  .mypage-user-icon
-    = link_to "/users", class: "user-icon" do
-      .user-thumb
+  .mypage-user
+    = link_to "/users", class: "mypage-user__icon" do
+      .mypage-user__icon--thumb
         = image_tag "https://mcdn.mercariapp.com/images/member_photo_noimage_thumb.png", alt: "プロフィール"
-      %h2.user-name
+      %h2.mypage-user__name
         名無し
-      .mypage-number
+      .mypage-user__number
         %div
           評価
           %span.review-num
@@ -24,61 +24,61 @@
           %h3
             = link_to "やることリスト"
     .tab-contents
-      %ul.mypage-tab-notification.active
+      %ul.mypage-tab-notification
         %li
-          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-item-link" do
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-tab-notification__item" do
             = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
-            .mypage-item-body
-              .mypage-item-text
+            .mypage-tab-notification__item--body
+              .mypage-tab-notification__item--body--text
                 明日、600ポイントの有効期限が切れます
-              .mypage-item-time
+              .mypage-tab-notification__item--body--time
                 %i.fas.fa-clock.icon-time
                 %span
                   13時間前
             %i.fas.fa-angle-right
         %li
-          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-item-link" do
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-tab-notification__item" do
             = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
-            .mypage-item-body
-              .mypage-item-text
-                メッセージが届いてるよ！
-              .mypage-item-time
+            .mypage-tab-notification__item--body
+              .mypage-tab-notification__item--body--text
+                明日、600ポイントの有効期限が切れます
+              .mypage-tab-notification__item--body--time
                 %i.fas.fa-clock.icon-time
                 %span
-                  1日前
+                  13時間前
             %i.fas.fa-angle-right
         %li
-          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-item-link" do
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-tab-notification__item" do
             = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
-            .mypage-item-body
-              .mypage-item-text
-                メッセージが届いてるよ！
-              .mypage-item-time
+            .mypage-tab-notification__item--body
+              .mypage-tab-notification__item--body--text
+                明日、600ポイントの有効期限が切れます
+              .mypage-tab-notification__item--body--time
                 %i.fas.fa-clock.icon-time
                 %span
-                  2日前
+                  13時間前
             %i.fas.fa-angle-right
         %li
-          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-item-link" do
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-tab-notification__item" do
             = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
-            .mypage-item-body
-              .mypage-item-text
-                メッセージが届いてるよ！
-              .mypage-item-time
+            .mypage-tab-notification__item--body
+              .mypage-tab-notification__item--body--text
+                明日、600ポイントの有効期限が切れます
+              .mypage-tab-notification__item--body--time
                 %i.fas.fa-clock.icon-time
                 %span
-                  一週間前
+                  13時間前
             %i.fas.fa-angle-right
         %li
-          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-item-link" do
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-tab-notification__item" do
             = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
-            .mypage-item-body
-              .mypage-item-text
-                メッセージが届いてるよ！
-              .mypage-item-time
+            .mypage-tab-notification__item--body
+              .mypage-tab-notification__item--body--text
+                明日、600ポイントの有効期限が切れます
+              .mypage-tab-notification__item--body--time
                 %i.fas.fa-clock.icon-time
                 %span
-                  1ヶ月前
+                  13時間前
             %i.fas.fa-angle-right
         %li.mypage-go-list
           =link_to "一覧を見る", "mypage/notification"
@@ -89,7 +89,7 @@
   .mypage-tab-history
     %h2.mypage-tab-history__head
       購入した商品
-    .mypage-tabs
+    .mypage-tab-history__body
       %ul
         %li.dealing
           %h3
