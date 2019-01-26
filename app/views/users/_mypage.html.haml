@@ -1,8 +1,8 @@
 .l-content
   .mypage-user-icon
-    %a.user-icon{:href => "/users"}
+    = link_to "/users", class: "user-icon" do
       .user-thumb
-        %img{:src => "https://mcdn.mercariapp.com/images/member_photo_noimage_thumb.png", :alt => "プロフィール"}
+        = image_tag "https://mcdn.mercariapp.com/images/member_photo_noimage_thumb.png", alt: "プロフィール"
       %h2.user-name
         名無し
       .mypage-number
@@ -19,17 +19,15 @@
       %ul
         %li.tab-notification
           %h3
-            %a{:href => ""}
-              お知らせ
+            = link_to "お知らせ"
         %li.tab-todo
           %h3
-            %a{:href => ""}
-              やることリスト
+            = link_to "やることリスト"
     .tab-contents
       %ul.mypage-tab-notification.active
         %li
-          %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/point/"}
-            %img{:src => "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"}
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-item-link" do
+            = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
             .mypage-item-body
               .mypage-item-text
                 明日、600ポイントの有効期限が切れます
@@ -39,8 +37,8 @@
                   13時間前
             %i.fas.fa-angle-right
         %li
-          %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/point/"}
-            %img{:src => "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"}
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-item-link" do
+            = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
             .mypage-item-body
               .mypage-item-text
                 メッセージが届いてるよ！
@@ -50,8 +48,8 @@
                   1日前
             %i.fas.fa-angle-right
         %li
-          %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/point/"}
-            %img{:src => "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"}
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-item-link" do
+            = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
             .mypage-item-body
               .mypage-item-text
                 メッセージが届いてるよ！
@@ -61,8 +59,8 @@
                   2日前
             %i.fas.fa-angle-right
         %li
-          %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/point/"}
-            %img{:src => "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"}
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-item-link" do
+            = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
             .mypage-item-body
               .mypage-item-text
                 メッセージが届いてるよ！
@@ -72,8 +70,8 @@
                   一週間前
             %i.fas.fa-angle-right
         %li
-          %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/point/"}
-            %img{:src => "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"}
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-item-link" do
+            = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
             .mypage-item-body
               .mypage-item-text
                 メッセージが届いてるよ！
@@ -83,8 +81,7 @@
                   1ヶ月前
             %i.fas.fa-angle-right
         %li.mypage-go-list
-          %a{:href => "mypage/notification"}
-            一覧を見る
+          =link_to "一覧を見る", "mypage/notification"
       %ul.mypage-tab-todo
         %li.mypage-item-nolist
           現在、やることリストはありません
@@ -96,12 +93,10 @@
       %ul
         %li.dealing
           %h3
-            %a{:href => ""}
-              取引中
+            =link_to "取引中"
         %li.done
           %h3
-            %a{:href => ""}
-              過去の取引
+            =link_to "過去の取引"
     .tab-contents
       %ul.dealing-detail
         %li.mypage-item-nolist
