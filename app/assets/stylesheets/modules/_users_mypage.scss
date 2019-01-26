@@ -141,7 +141,7 @@
         }
       }
       .mypage-tab-todo {
-        .mypage-item-nolist {
+        &__nolist {
           background: url("logo-gray-icon.svg");
           background-repeat: no-repeat;
           background-position: center 40px;
