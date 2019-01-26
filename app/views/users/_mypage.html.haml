@@ -1,0 +1,106 @@
+.l-content
+  .mypage-user
+    = link_to "/users", class: "mypage-user__icon" do
+      .mypage-user__icon--thumb
+        = image_tag "https://mcdn.mercariapp.com/images/member_photo_noimage_thumb.png", alt: "プロフィール"
+      %h2.mypage-user__name
+        名無し
+      .mypage-user__number
+        %div
+          評価
+          %span.review-num
+            0
+        %div
+          出品数
+          %span.item-num
+            0
+  .mypage-notification-todo
+    .mypage-tabs
+      %ul
+        %li.tab-notification
+          %h3
+            = link_to "お知らせ"
+        %li.tab-todo
+          %h3
+            = link_to "やることリスト"
+    .tab-contents
+      %ul.mypage-tab-notification
+        %li
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-tab-notification__item" do
+            = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
+            .mypage-tab-notification__item--body
+              .mypage-tab-notification__item--body--text
+                明日、600ポイントの有効期限が切れます
+              .mypage-tab-notification__item--body--time
+                %i.fas.fa-clock.icon-time
+                %span
+                  13時間前
+            %i.fas.fa-angle-right
+        %li
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-tab-notification__item" do
+            = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
+            .mypage-tab-notification__item--body
+              .mypage-tab-notification__item--body--text
+                明日、600ポイントの有効期限が切れます
+              .mypage-tab-notification__item--body--time
+                %i.fas.fa-clock.icon-time
+                %span
+                  13時間前
+            %i.fas.fa-angle-right
+        %li
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-tab-notification__item" do
+            = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
+            .mypage-tab-notification__item--body
+              .mypage-tab-notification__item--body--text
+                明日、600ポイントの有効期限が切れます
+              .mypage-tab-notification__item--body--time
+                %i.fas.fa-clock.icon-time
+                %span
+                  13時間前
+            %i.fas.fa-angle-right
+        %li
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-tab-notification__item" do
+            = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
+            .mypage-tab-notification__item--body
+              .mypage-tab-notification__item--body--text
+                明日、600ポイントの有効期限が切れます
+              .mypage-tab-notification__item--body--time
+                %i.fas.fa-clock.icon-time
+                %span
+                  13時間前
+            %i.fas.fa-angle-right
+        %li
+          = link_to "https://www.mercari.com/jp/mypage/point/", class: "mypage-tab-notification__item" do
+            = image_tag "https://static-mercari-jp.akamaized.net/images/mercari_profile.png"
+            .mypage-tab-notification__item--body
+              .mypage-tab-notification__item--body--text
+                明日、600ポイントの有効期限が切れます
+              .mypage-tab-notification__item--body--time
+                %i.fas.fa-clock.icon-time
+                %span
+                  13時間前
+            %i.fas.fa-angle-right
+        %li.mypage-go-list
+          =link_to "一覧を見る", "mypage/notification"
+      %ul.mypage-tab-todo
+        %li.mypage-tab-todo__nolist
+          現在、やることリストはありません
+
+  .mypage-tab-history
+    %h2.mypage-tab-history__head
+      購入した商品
+    .mypage-tab-history__body
+      %ul
+        %li.dealing
+          %h3
+            =link_to "取引中"
+        %li.done
+          %h3
+            =link_to "過去の取引"
+    .tab-contents
+      %ul.dealing-detail
+        %li.mypage-item-nolist
+          取引中の商品がありません
+      %ul.done-detail
+        %li.mypage-item-nolist
+          過去の取引はありません
