@@ -1,0 +1,155 @@
+.mypage-confirm-box {
+  margin: 0;
+  text-align: center;
+  h2 {
+    font-size: 24px;
+    padding: 8px 24px;
+    font-weight: bold;
+  }
+  .form-wrap {
+    padding: 64px 64px 0;
+  }
+  .form-group + .form-group {
+    margin-top: 40px;
+  }
+  .user-confirm-form {
+    &--column {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      label, input {
+        width: 100%;
+      }
+      label {
+        text-align: left;
+        line-height: 14px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .require {
+        position: relative;
+        &::after {
+          content: '必須';
+          display: inline-block;
+          font-size: 11px;
+          line-height: 18px;
+          padding: 0 4px;
+          border-radius: 2px;
+          color: $font-color_white;
+          background-color: $bg-color_red;
+          position: absolute;
+          top: -3px;
+          right: -40px;
+        }
+      }
+      .option {
+        position: relative;
+        &::after {
+          content: '任意';
+          display: inline-block;
+          font-size: 11px;
+          line-height: 18px;
+          padding: 0 4px;
+          border-radius: 2px;
+          color: $font-color_white;
+          background-color: $bg-seachform-border-color;
+          position: absolute;
+          top: -3px;
+          right: -40px;
+        }
+      }
+      input {
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid $bg-seachform-border-color;
+        background-color: $bg-header-color;
+        line-height: 1.5;
+        font-size: 16px;
+        box-sizing: border-box;
+        margin-top: 8px;
+      }
+      .select-wrap {
+        position: relative;
+        width: 100%;
+        margin-top: 8px;
+        &::before {
+          z-index: 1;
+          position: absolute;
+          right: 15px;
+          top: 0;
+          content: "\f078";
+          font-family: "font Awesome 5 Free";
+          font-weight: 900;
+          line-height: 43px;
+          color: #7F878C;
+          pointer-events: none;
+        }
+      }
+      select{
+        background: none transparent;
+        vertical-align: middle;
+        font-size: inherit;
+        color: inherit;
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding: 10px 16px 8px;
+        border: 1px solid $bg-seachform-border-color;
+        color: $bg-color_gray;
+        width: 100%;
+        border-radius: 4px;
+      }
+    }
+    &--parallel {
+      display: flex;
+      justify-content: space-between;
+    }
+    .column-parallel {
+      width: 100%;
+      .select-wrap {
+        width: 173px;
+        text-align: left;
+        select {
+          width: 140px;
+        }
+        &::before {
+          right: 48px;
+        }
+      }
+    }
+    .p-notice {
+      font-size: 14px;
+      line-height: 14px;
+      color: $bg-color_gray;
+      margin-top: 8px;
+    }
+    &--btn {
+      color: #fff;
+      margin-top: 40px;
+      padding: 12px 0;
+      width: 100%;
+    }
+  }
+}
+.notice-user-registration {
+  text-align: right;
+  width: 572px;
+  margin: 40px auto 60px;
+  line-height: 14px;
+  font-size: 14px;
+  padding-right: 20px;
+  a {
+    position: relative;
+    &::after {
+      content: "\f054";
+      font-family: "font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      top: 0;
+      right: -10px;
+    }
+  }
+}
