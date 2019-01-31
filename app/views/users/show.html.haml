@@ -1,0 +1,63 @@
+= render 'layouts/header'
+.double-large-container.margin-bottom_40
+  = render 'users/side-bar'
+  .l-single-container.mypage-confirm-box
+    %h2 本人情報の登録
+    %p.font-size_14.line-height_14 お客さまのあんしん・あんぜんな取引のため、本人情報のご登録をお願いしております。
+    .form-wrap
+      %form.user-confirm-form
+        .user-confirm-form--column.form-group
+          %label{for: "user-name"}
+            %span.require お名前
+          %input#user-name{name: "", placeholder: "例）山田", type: "text"}/
+          %input{name: "", placeholder: "例）彩", type: "text"}/
+        .user-confirm-form--column.form-group
+          %label{for: "user-name-kana"}
+            %span.require お名前カナ
+          %input#user-name-kana{name: "", placeholder: "例）ヤマダ", type: "text"}/
+          %input{name: "", placeholder: "例）アヤ", type: "text"}/
+        .user-confirm-form--column.form-group
+          %label{for: "post-num"}
+            %span.option 郵便番号
+          %input#post-num{name: "", placeholder: "例）1234567", type: "number"}/
+        .user-confirm-form--column.form-group
+          %label{for: "prefectures"}
+            %span.require 都道府県
+          .select-wrap
+            %select#prefectures{name: "", required: ""}
+              %option{disabled: "disabled", hidden: "", selected: "selected", value: ""} 選択してください
+              - @value.each do |value|
+                %option{value: value}= value
+        .user-confirm-form--column.form-group
+          %label{for: "address-1"}
+            %span.require 市区町村
+          %input#address-1{name: "", placeholder: "例）横浜市緑区", type: "text"}/
+        .user-confirm-form--column.form-group
+          %label{for: "address-2"}
+            %span.require 番地
+          %input#address-2{name: "", placeholder: "例）青山1-1-1", type: "text"}/
+        .user-confirm-form--column.form-group
+          %label{for: "address-3"}
+            %span.option 建物名
+          %input#address-3{name: "", placeholder: "例）柳ビル103", type: "text"}/
+        .user-confirm-form--column.form-group
+          %label{for: "birthday"}
+            %span.require 生年月日
+          .user-confirm-form--parallel.column-parallel
+            .select-wrap
+              %select#birthday{name: "", required: ""}
+                %option{disabled: "disabled", hidden: "", selected: "selected", value: ""} --
+              年
+            .select-wrap
+              %select{name: "month"}
+                %option{disabled: "disabled", hidden: "", selected: "selected", value: ""} --
+              月
+            .select-wrap
+              %select{name: "day"}
+                %option{disabled: "disabled", hidden: "", selected: "selected", value: ""} --
+              日
+          %p.p-notice ※出品されたことがある、本人情報未登録のお客さまもご対象となります。
+        %input.btn-large.background-color_red.user-confirm-form--btn{type: "submit", value: "登録する"}/
+    %p.notice-user-registration
+      = link_to '本人情報の登録について','#',class: 'blue-link'
+= render partial: "layouts/sale_item_btn"

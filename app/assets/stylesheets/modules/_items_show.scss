@@ -147,14 +147,6 @@
     }
   }
 }
-.blue-link {
-  color: $font-color_link;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-    opacity: .7;
-  }
-}
 .user-rating {
   span {
     font-size: 12px;
