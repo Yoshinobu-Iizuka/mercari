@@ -1,4 +1,4 @@
-#side-bar
+.side-bar
   .mypage-nav
     %ul.mypage-nav-list
       %li
@@ -83,23 +83,23 @@
           住所変更
           %i.fas.fa-angle-right
       %li
-        = link_to users_path, class: "mypage-nav-list_item" do
+        = link_to "/", class: "mypage-nav-list_item" do
           支払い方法
           %i.fas.fa-angle-right
       %li
-        = link_to users_path, class: "mypage-nav-list_item" do
+        = link_to "/", class: "mypage-nav-list_item" do
           メール/パスワード
           %i.fas.fa-angle-right
       %li
-        = link_to users_path, class: "mypage-nav-list_item" do
+        = link_to "#", class: "mypage-nav-list_item" do
           本人情報
           %i.fas.fa-angle-right
       %li
-        = link_to users_path, class: "mypage-nav-list_item" do
+        = link_to "#", class: "mypage-nav-list_item" do
           電話番号の確認
           %i.fas.fa-angle-right
       %li
-        = link_to users_path, class: "mypage-nav-list_item" do
+        = link_to "/users/logout", class: "mypage-nav-list_item" do
           ログアウト
           %i.fas.fa-angle-right
 
