@@ -1,0 +1,19 @@
+.logout {
+  background-color: #fff;
+  .logout-container {
+    padding: 64px;
+    &__button {
+      max-width: 320px;
+      margin: 0 auto;
+      background-color: $bg-color_red;
+      &--content {
+        display: block;
+        line-height: 50px;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+  }
+}
