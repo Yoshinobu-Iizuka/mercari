@@ -6,7 +6,7 @@
     list-style: none;
     li {
       border-top: 1px solid #eee;
-      .mypage-nav-list_head {
+      .mypage-nav-list_head { //該当のページに遷移した際に付与する
         text-decoration: none;
         background-color: #DDDDDD;
         color: $font-color_black;
