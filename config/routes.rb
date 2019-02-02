@@ -2,9 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'items#index'
   resources :users, only: %i(index show)
-  get 'items/index'
-  get 'items/show'
-  get 'items/new'
-  get 'items/confirm'
-  get 'creditcards/index'
+  resources :items, only: [:index]
+  resources :creditcards, only: [:index]
+  resources :items_buy_confirms, only: [:index]
 end
