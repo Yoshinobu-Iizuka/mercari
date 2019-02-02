@@ -1,0 +1,52 @@
+<%= render 'layouts/header' %>
+<div class="double-large-container margin-bottom_40">
+  <%= render 'users/side-bar' %>
+  <div class="l-single-container mypage-confirm-box end-of-contents">
+    <h2>クレジットカード情報入力</h2>
+    <div class="form-wrap">
+      <form class="user-confirm-form creditcard-form">
+        <div class="user-confirm-form--column form-group">
+          <label for="card-num">
+            <span class="require">カード番号</span>
+          </label>
+          <input id="card-num" type="number" name="" placeholder="半角数字のみ">
+          <ul class="card-logo">
+            <li class="card-logo--visa"><%= image_tag('visa.svg') %></li>
+            <li class="card-logo--master"><%= image_tag('master.svg') %></li>
+            <li class="card-logo--saison"><%= image_tag('saison.svg') %></li>
+            <li class="card-logo--jcb"><%= image_tag('jcb.svg') %></li>
+            <li class="card-logo--amex"><%= image_tag('amex.svg') %></li>
+            <li class="card-logo--diners"><%= image_tag('diners.svg') %></li>
+            <li class="card-logo--discover"><%= image_tag('discover.svg') %></li>
+          </ul>
+        </div>
+        <div class="user-confirm-form--column form-group">
+          <label for="card-date-month">
+            <span class="require">有効期限</span>
+          </label>
+          <div class="select-wrap-small column-parallel_left">
+            <select id="card-date-month" name="" class="select-small" required>
+              <option value="">--</option>
+            </select>
+            <span class="unit">月</span>
+          </div>
+          <div class="select-wrap-small column-parallel_left">
+            <select name="" class="select-small" required>
+              <option value="">--</option>
+            </select>
+            <span class="unit">年</span>
+          </div>
+        </div>
+        <div class="user-confirm-form--column form-group">
+          <label for="card-num">
+            <span class="require">セキュリティコード</span>
+          </label>
+          <input id="card-num" type="number" name="" placeholder="半角数字のみ">
+          <p class="card-text-right"><%= link_to 'カード裏面の番号とは？','#' %></p>
+        </div>
+        <button type="submit" class="btn-small background-color_red margin-top_30">追加する</button>
+      </form>
+    </div>
+  </div>
+</div>
+<%= render partial: "layouts/sale_item_btn" %>
