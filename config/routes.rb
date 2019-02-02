@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'items/show'
   get 'items/new'
   get 'items/confirm'
+  get 'creditcards/index'
 end
