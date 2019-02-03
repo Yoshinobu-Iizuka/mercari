@@ -54,9 +54,6 @@ main {
         border: 1px solid #f5f5f5;
         outline: 0;
         font-size: 16px;
-        &:focus {
-          border-color:rgb(0, 153, 232);
-        }
       }
     }
     .sale-content-option {
@@ -84,9 +81,6 @@ main {
         cursor: pointer;
         position: relative;
         outline: none;
-        &:focus {
-          border-color:rgb(0, 153, 232);
-        }
       }
       &__selectform-img {
         position: absolute;
@@ -105,9 +99,6 @@ main {
           border: 1px solid #f5f5f5;
           border-radius: 5px;
           outline: none;
-          &:focus {
-            border-color:rgb(0, 153, 232);
-          }
         }
       }
     }
@@ -143,9 +134,6 @@ main {
           text-align: right;
           font-size: 16px;
           margin-left: 10px;
-          &:focus {
-            border-color:rgb(0, 153, 232);
-          }
         }
       }
       &__fee {

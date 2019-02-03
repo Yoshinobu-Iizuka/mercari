@@ -24,7 +24,7 @@
         %h3.required-box-tag.title-font-black
           商品の説明
           %span.required-box 必須
-        %textarea.sale-content__explanation{placeholder: "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。合わせやすいのでおすすめです。"}
+        %textarea.sale-content__explanation.sale-content__name-form{placeholder: "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。合わせやすいのでおすすめです。"}
       .sale-content-option
         .sale-content-option__left
           %h3.title-font-gray 商品の詳細
@@ -32,7 +32,7 @@
           %p.required-box-tag
             カテゴリー
             %span.required-box 必須
-          %select#first-selectbox.sale-content-option__right.sale-content-option__category-form
+          %select#first-selectbox.sale-content-option__right.sale-content-option__category-form.sale-content__name-form
             %option{value: ""} ---
             %option{value: "1"} レディース
             %option{value: "2"} メンズ
@@ -49,7 +49,7 @@
             %option{value: "10"} その他
           %i.fas.fa-chevron-down.sale-content-option__selectform-img
         .sale-content-option__right
-          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form.sale-content__name-form
             %option{value: "---"} ---
             %option{value: "11"} トップス
             %option{value: "12"} ジャケット/アウター
@@ -72,7 +72,7 @@
             %option{value: "29"} その他
           %i.fas.fa-chevron-down.sale-content-option__selectform-img
         .sale-content-option__right
-          %select#third-selectbox.sale-content-option__right.sale-content-option__category-form
+          %select#third-selectbox.sale-content-option__right.sale-content-option__category-form.sale-content__name-form
             %option{value: ""} ---
             %option{value: "119"} Tシャツ/カットソー(半袖/袖なし)
             %option{value: "120"} Tシャツ/カットソー(七分/長袖)
@@ -97,7 +97,7 @@
           %p.required-box-tag
             サイズ
             %span.required-box 必須
-          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form.sale-content__name-form
             %option{value: ""} ---
             %option{value: "1"} 新品、未使用
             %option{value: "2"} 未使用に近い
@@ -110,12 +110,12 @@
           %p.required-box-tag
             ブランド
             %span.any-box 任意
-          %input.sale-content-option__right.sale-content-option__right-brand__form
+          %input.sale-content-option__right.sale-content-option__right-brand__form.sale-content__name-form
         .sale-content-option__right-brand
           %p.required-box-tag
             商品の状態
             %span.required-box 必須
-          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form.sale-content__name-form
             %option{value: ""} ---
             %option{value: "1"} 新品、未使用
             %option{value: "2"} 未使用に近い
@@ -134,7 +134,7 @@
           %p.required-box-tag
             配送料の負担
             %span.required-box 必須
-          %select#first-selectbox.sale-content-option__right.sale-content-option__category-form
+          %select#first-selectbox.sale-content-option__right.sale-content-option__category-form.sale-content__name-form
             %option{value: ""} ---
             %option{value: "2"} 送料込み(出品者負担)
             %option{value: "1"} 着払い(購入者負担)
@@ -143,7 +143,7 @@
           %p.required-box-tag
             配送の方法
             %span.required-box 必須
-          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form.sale-content__name-form
             %option{value: ""} ---
             %option{value: "5"} 未定
             %option{value: "14"} らくらくメルカリ便
@@ -159,7 +159,7 @@
           %p.required-box-tag
             発送元の地域
             %span.required-box 必須
-          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form.sale-content__name-form
             %option{value: ""} ---
             %option{value: "1"} 北海道
             %option{value: "2"} 青森県
@@ -214,7 +214,7 @@
           %p.required-box-tag
             発送までの日数
             %span.required-box 必須
-          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form.sale-content__name-form
             %option{value: ""} ---
             %option{value: "1"} 1~2日で発送
             %option{value: "2"} 2~3日で発送
@@ -231,7 +231,7 @@
               価格
               %span.required-box 必須
           %span.price-text ¥
-          %input.sale-content-price__form-right{placeholder: "例）300  "}/
+          %input.sale-content-price__form-right.sale-content__name-form{placeholder: "例）300  "}/
         .sale-content-price__fee
           .sale-content-price__fee__left
             %p 販売手数料(10%)
