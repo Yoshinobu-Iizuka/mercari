@@ -10,17 +10,17 @@ main {
       font-weight: bold;
       font-size: 22px;
     }
-    .sale-upload-box {
+    .sale-upload {
       padding: 40px;
       border-bottom: 2px solid #f5f5f5;
-      .sale-upload-dropbox {
+      &__dropbox {
         width: 620px;
         background-color: #f5f5f5;
         border: 1px dashed #c8c8c8;
-        .sale-upload-dropbox-btn {
+        &__btn {
           display: none;
         }
-        .sale-upload-dropbox-text {
+        &__text {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -35,41 +35,27 @@ main {
       width: 620px;
       padding: 40px;
       border-bottom: 2px solid #f5f5f5;
-      .sale-content-name-form {
+      &__name-form {
         padding: 10px;
         height: 30px;
         width: 590px;
-        border: 0.5px solid #f5f5f5;
+        border: 1px solid #f5f5f5;
         outline: 0;
         border-radius: 5px;
         margin-bottom: 40px;
         &:focus {
-          height: 30px;
-          width: 590px;
-          border: 0.5px solid #f5f5f5;
-          outline: 0;
-          border-radius: 5px;
-          border-color: #0099e8;
+          border-color:rgb(0, 153, 232);
         }
       }
-      .sale-content-explanation {
+      &__explanation {
         padding: 10px;
         height: 120px;
         width: 590px;
-        border: 0.5px solid #f5f5f5;
+        border: 1px solid #f5f5f5;
         outline: 0;
-        border-radius: 5px;
         font-size: 16px;
         &:focus {
-          padding: 10px;
-          height: 120px;
-          width: 590px;
-          border: 0.5px solid #f5f5f5;
-          outline: 0;
-          border-radius: 5px;
-          font-size: 16px;
-          border: 0.5px solid #f5f5f5;
-          border-color: #0099e8;
+          border-color:rgb(0, 153, 232);
         }
       }
     }
@@ -78,18 +64,17 @@ main {
       height: 530px;
       padding: 40px;
       border-bottom: 2px solid #f5f5f5;
-      .sale-content-option-left {
+      &__left {
         float: left;
       }
-      .sale-content-option-right {
+      &__right {
         width: 400px;
         float: right;
       }
-      .sale-content-option-category-form {
+      &__category-form {
         padding: 10px;
         height: 50px;
-        border: 0.5px solid #f5f5f5;
-        outline: 0;
+        border: 1px solid #f5f5f5;
         border-radius: 5px;
         margin-bottom: 5px;
         background-color: white;
@@ -98,58 +83,43 @@ main {
         -moz-appearance: none;
         cursor: pointer;
         position: relative;
+        outline: none;
+        &:focus {
+          border-color:rgb(0, 153, 232);
+        }
       }
-      .sale-content-option-selectform-img {
+      &__selectform-img {
         position: absolute;
         padding-left: 370px;
         padding-top: 15px;
         color: gray;
       }
-      .sale-content-option-right-brand {
+      &__right-brand {
         width: 400px;
         float: right;
         margin-top: 40px;
-        .sale-content-option-brand-form {
+        &__form {
           padding: 10px;
           height: 30px;
           width: 380px;
-          border: 0.5px solid #f5f5f5;
-          outline: 0;
+          border: 1px solid #f5f5f5;
           border-radius: 5px;
+          outline: none;
           &:focus {
-            height: 30px;
-            width: 380px;
-            border: 0.5px solid #f5f5f5;
-            outline: 0;
-            border-radius: 5px;
-            border-color: #0099e8;
+            border-color:rgb(0, 153, 232);
           }
-        }
-        .sale-content-option-status-form {
-          padding: 10px;
-          height: 45px;
-          border: 0.5px solid #f5f5f5;
-          outline: 0;
-          border-radius: 5px;
-          margin-bottom: 5px;
-          background-color: white;
-          appearance: button;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          cursor: pointer;
-          position: relative;
         }
       }
     }
-    .sale-content-option-price {
+    .sale-content-price {
       width: 620px;
       padding: 40px;
       background-color: white;
       border-bottom: 2px solid #f5f5f5;
-      .sale-content-price-left {
+      &__left {
         float: left;
       }
-      .sale-content-price-form {
+      &__form {
         width: 400px;
         float: right;
         display: flex;
@@ -157,35 +127,28 @@ main {
         justify-content: space-evenly;
         padding-bottom: 25px;
         border-bottom: 2px solid #f5f5f5;
-        .sale-content-price-form-left {
+        &__left {
           width: 200px;
           height: 35px;
           padding-top: 10px;
           font-weight: bold;
           font-size: 14px;
         }
-        .sale-content-price-form-right {
+        &__right {
           width: 170px;
           height: 45px;
-          border: 0.5px solid #f5f5f5;
+          border: 1px solid #f5f5f5;
           outline: 0;
           border-radius: 5px;
           text-align: right;
           font-size: 16px;
           margin-left: 10px;
           &:focus {
-            width: 170px;
-            height: 45px;
-            border: 0.5px solid #f5f5f5;
-            outline: 0;
-            border-radius: 5px;
-            border-color: #0099e8;
-            text-align: right;
-            margin-left: 10px;
+            border-color:rgb(0, 153, 232);
           }
         }
       }
-      .sale-content-price-fee {
+      &__fee {
         width: 400px;
         float: right;
         display: flex;
@@ -193,19 +156,19 @@ main {
         justify-content: space-evenly;
         border-bottom: 2px solid #f5f5f5;
         padding-top: 20px;
-        .sale-content-price-fee-left {
+        &__left {
           width: 200px;
           height: 35px;
           font-size: 14px;
         }
-        .sale-content-price-fee-right {
+        &__right {
           width: 180px;
           height: 45px;
           text-align: right;
           font-size: 12px;
         }
       }
-      .sale-content-price-gains {
+      &__gains {
         width: 400px;
         float: right;
         display: flex;
@@ -214,12 +177,12 @@ main {
         padding-bottom: 25px;
         font-weight: bold;
         padding-top: 20px;
-        .sale-content-price-gains-left {
+        &__left {
           width: 200px;
           height: 35px;
           font-size: 16px;
         }
-        .sale-content-price-gains-right {
+        &__right {
           width: 180px;
           height: 45px;
           text-align: right;
@@ -233,7 +196,7 @@ main {
       background-color: white;
       border-bottom: 2px solid #f5f5f5;
       font-size: 14px;
-      .sale-content-btnbox-display {
+      &__display {
         display: block;
         margin-top: 40px;
         height: 25px;
@@ -245,7 +208,7 @@ main {
         background-color: #ea352d;
         color: white;
       }
-      .sale-content-btnbox-remove {
+      &__remove {
         display: block;
         margin: 24px 170px 0;
         height: 25px;
@@ -332,7 +295,6 @@ main {
   text-decoration: none;
   color: #0099e8;
   &:hover {
-    color: #0099e8;
     opacity: 0.8;
     text-decoration: underline;
   }

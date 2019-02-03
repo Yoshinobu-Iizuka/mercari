@@ -4,15 +4,15 @@
   .single-main
     .sale-container
       %h2.sale-head 商品の情報を入力
-      .sale-upload-box
+      .sale-upload
         %h3.required-box-tag.title-font-black
           出品画像
           %span.required-box 必須
         %p.apload-text 最大10枚までアップロードできます
-        .sale-upload-dropbox
+        .sale-upload__dropbox
           %label
-            %input.sale-upload-dropbox-btn{label: "image",type: "file"}
-            %pre.sale-upload-dropbox-text
+            %input.sale-upload__dropbox__btn{label: "image",type: "file"}
+            %pre.sale-upload__dropbox__text
               ドラッグアンドドロップ
               %br>/
               またはクリックしてファイルをアップロード
@@ -20,19 +20,19 @@
         %h3.required-box-tag.title-font-black
           商品名
           %span.required-box 必須
-        %input.sale-content-name-form{placeholder: "商品名（必須40文字まで)"}
+        %input.sale-content__name-form{placeholder: "商品名（必須40文字まで)"}
         %h3.required-box-tag.title-font-black
           商品の説明
           %span.required-box 必須
-        %textarea.sale-content-explanation{placeholder: "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。合わせやすいのでおすすめです。"}
+        %textarea.sale-content__explanation{placeholder: "商品の説明(必須 1,000文字以内)(色、素材、重さ、定価、注意点など)例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。合わせやすいのでおすすめです。"}
       .sale-content-option
-        .sale-content-option-left
+        .sale-content-option__left
           %h3.title-font-gray 商品の詳細
-        .sale-content-option-right
+        .sale-content-option__right
           %p.required-box-tag
             カテゴリー
             %span.required-box 必須
-          %select#first-selectbox.sale-content-option-right.sale-content-option-category-form
+          %select#first-selectbox.sale-content-option__right.sale-content-option__category-form
             %option{value: ""} ---
             %option{value: "1"} レディース
             %option{value: "2"} メンズ
@@ -47,9 +47,9 @@
             %option{value: "1027"} チケット
             %option{value: "1318"} 自動車・オートバイ
             %option{value: "10"} その他
-          %i.fas.fa-chevron-down.sale-content-option-selectform-img
-        .sale-content-option-right
-          %select#second-selectbox.sale-content-option-right.sale-content-option-category-form
+          %i.fas.fa-chevron-down.sale-content-option__selectform-img
+        .sale-content-option__right
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
             %option{value: "---"} ---
             %option{value: "11"} トップス
             %option{value: "12"} ジャケット/アウター
@@ -70,9 +70,9 @@
             %option{value: "27"} スーツ/フォーマル/ドレス
             %option{value: "28"} マタニティ
             %option{value: "29"} その他
-          %i.fas.fa-chevron-down.sale-content-option-selectform-img
-        .sale-content-option-right
-          %select#third-selectbox.sale-content-option-right.sale-content-option-category-form
+          %i.fas.fa-chevron-down.sale-content-option__selectform-img
+        .sale-content-option__right
+          %select#third-selectbox.sale-content-option__right.sale-content-option__category-form
             %option{value: ""} ---
             %option{value: "119"} Tシャツ/カットソー(半袖/袖なし)
             %option{value: "120"} Tシャツ/カットソー(七分/長袖)
@@ -92,12 +92,12 @@
             %option{value: "134"} ベアトップ/チューブトップ
             %option{value: "135"} ジャージ
             %option{value: "136"} その他
-          %i.fas.fa-chevron-down.sale-content-option-selectform-img
-        .sale-content-option-right-brand
+          %i.fas.fa-chevron-down.sale-content-option__selectform-img
+        .sale-content-option__right-brand
           %p.required-box-tag
             サイズ
             %span.required-box 必須
-          %select#second-selectbox.sale-content-option-right.sale-content-option-category-form
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
             %option{value: ""} ---
             %option{value: "1"} 新品、未使用
             %option{value: "2"} 未使用に近い
@@ -105,17 +105,17 @@
             %option{value: "4"} やや傷や汚れあり
             %option{value: "5"} 傷や汚れあり
             %option{value: "6"} 全体的に状態が悪い
-          %i.fas.fa-chevron-down.sale-content-option-selectform-img
-        .sale-content-option-right-brand
+          %i.fas.fa-chevron-down.sale-content-option__selectform-img
+        .sale-content-option__right-brand
           %p.required-box-tag
             ブランド
             %span.any-box 任意
-          %input.sale-content-option-right.sale-content-option-brand-form/
-        .sale-content-option-right-brand
+          %input.sale-content-option__right.sale-content-option__right-brand__form
+        .sale-content-option__right-brand
           %p.required-box-tag
             商品の状態
             %span.required-box 必須
-          %select#second-selectbox.sale-content-option-right.sale-content-option-category-form
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
             %option{value: ""} ---
             %option{value: "1"} 新品、未使用
             %option{value: "2"} 未使用に近い
@@ -123,27 +123,27 @@
             %option{value: "4"} やや傷や汚れあり
             %option{value: "5"} 傷や汚れあり
             %option{value: "6"} 全体的に状態が悪い
-          %i.fas.fa-chevron-down.sale-content-option-selectform-img
+          %i.fas.fa-chevron-down.sale-content-option__selectform-img
         .clearfix
       .sale-content-option.height-495
-        .sale-content-option-left
+        .sale-content-option__left
           .title-font-gray
             配送について
             = link_to "?",'#',class: "question-image"
-        .sale-content-option-right
+        .sale-content-option__right
           %p.required-box-tag
             配送料の負担
             %span.required-box 必須
-          %select#first-selectbox.sale-content-option-right.sale-content-option-category-form
+          %select#first-selectbox.sale-content-option__right.sale-content-option__category-form
             %option{value: ""} ---
             %option{value: "2"} 送料込み(出品者負担)
             %option{value: "1"} 着払い(購入者負担)
-          %i.fas.fa-chevron-down.sale-content-option-selectform-img
-        .sale-content-option-right-brand
+          %i.fas.fa-chevron-down.sale-content-option__selectform-img
+        .sale-content-option__right-brand
           %p.required-box-tag
             配送の方法
             %span.required-box 必須
-          %select#second-selectbox.sale-content-option-right.sale-content-option-category-form
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
             %option{value: ""} ---
             %option{value: "5"} 未定
             %option{value: "14"} らくらくメルカリ便
@@ -154,12 +154,12 @@
             %option{value: "11"} ゆうパック
             %option{value: "13"} クリックポスト
             %option{value: "7"} ゆうパケット
-          %i.fas.fa-chevron-down.sale-content-option-selectform-img
-        .sale-content-option-right-brand
+          %i.fas.fa-chevron-down.sale-content-option__selectform-img
+        .sale-content-option__right-brand
           %p.required-box-tag
             発送元の地域
             %span.required-box 必須
-          %select#second-selectbox.sale-content-option-right.sale-content-option-category-form
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
             %option{value: ""} ---
             %option{value: "1"} 北海道
             %option{value: "2"} 青森県
@@ -209,38 +209,38 @@
             %option{value: "46"} 鹿児島県
             %option{value: "47"} 沖縄県
             %option{value: "99"} 未定
-          %i.fas.fa-chevron-down.sale-content-option-selectform-img
-        .sale-content-option-right-brand
+          %i.fas.fa-chevron-down.sale-content-option__selectform-img
+        .sale-content-option__right-brand
           %p.required-box-tag
             発送までの日数
             %span.required-box 必須
-          %select#second-selectbox.sale-content-option-right.sale-content-option-category-form
+          %select#second-selectbox.sale-content-option__right.sale-content-option__category-form
             %option{value: ""} ---
             %option{value: "1"} 1~2日で発送
             %option{value: "2"} 2~3日で発送
             %option{value: "3"} 4~7日で発送
-          %i.fas.fa-chevron-down.sale-content-option-selectform-img
-      .sale-content-option-price
-        .sale-content-price-left
+          %i.fas.fa-chevron-down.sale-content-option__selectform-img
+      .sale-content-price
+        .sale-content-price__left
           %p.title-font-gray
             販売価格(300〜9,999,999)
             = link_to "?",'#',class: "question-image"
-        .sale-content-price-form
-          .sale-content-price-form-left
+        .sale-content-price__form
+          .sale-content-price__form__left
             %p.required-box-tag
               価格
               %span.required-box 必須
           %span.price-text ¥
-          %input.sale-content-price-form-right{:placeholder => "例）300  "}/
-        .sale-content-price-fee
-          .sale-content-price-fee-left
+          %input.sale-content-price__form-right{placeholder: "例）300  "}/
+        .sale-content-price__fee
+          .sale-content-price__fee__left
             %p 販売手数料(10%)
-          .sale-content-price-fee-right
+          .sale-content-price__fee__right
             %h3 -
-        .sale-content-price-gains
-          .sale-content-price-gains-left
+        .sale-content-price__gains
+          .sale-content-price__gains__left
             %p 販売利益
-          .sale-content-price-gains-right
+          .sale-content-price__gains__right
             %h3 -
         .clearfix
       .sale-content-btnbox
@@ -252,7 +252,7 @@
         %p
           また、出品をもちまして
           = link_to "加盟店規約に同意したことになります。",'#',class: "underline-none"
-        %btn.sale-content-btnbox-display{type: "submit"} 出品する
-        %btn.sale-content-btnbox-remove{type: "submit"} もどる
+        %btn.sale-content-btnbox__display{type: "submit"} 出品する
+        %btn.sale-content-btnbox__remove{type: "submit"} もどる
   .clearfix
 = render partial: "layouts/users_footer"
