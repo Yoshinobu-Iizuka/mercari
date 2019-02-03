@@ -9,4 +9,7 @@ class ItemsController < ApplicationController
   def confirm
   end
 
+  def new
+  end
+
 end

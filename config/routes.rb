@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     get 'logout', on: :collection
   end
   resources :users, only: %i(index show)
-  resources :items, only: [:index]
+  resources :items, only: [:index,:new]
   resources :creditcards, only: [:index]
   resources :items_buy_confirms, only: [:index]
 end
