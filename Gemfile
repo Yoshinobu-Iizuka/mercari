@@ -64,6 +64,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'rspec-rails'
 end
 
 gem 'mini_magick'
@@ -72,3 +73,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem "jquery-slick-rails"
 gem 'devise'
+
+group :development do
+  gem 'web-console', '~> 2.0'
+end
