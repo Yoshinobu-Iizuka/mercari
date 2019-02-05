@@ -1,0 +1,293 @@
+main {
+  width: 700px;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  .single-main .sale-container {
+    background-color: white;
+    .sale-head {
+      text-align: center;
+      padding: 32px 16px;
+      border-bottom: 2px solid #f5f5f5;
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .sale-upload {
+      padding: 40px;
+      border-bottom: 2px solid #f5f5f5;
+      &__dropbox {
+        width: 620px;
+        background-color: #f5f5f5;
+        border: 1px dashed #c8c8c8;
+        &__btn {
+          display: none;
+        }
+        &__text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 160px;
+          text-align: center;
+          cursor: pointer;
+          font-size: 14px;
+        }
+      }
+    }
+    .sale-content {
+      width: 620px;
+      padding: 40px;
+      border-bottom: 2px solid #f5f5f5;
+      &__name-form {
+        padding: 10px;
+        height: 30px;
+        width: 590px;
+        border: 1px solid #f5f5f5;
+        outline: 0;
+        border-radius: 5px;
+        margin-bottom: 40px;
+        &:focus {
+          border-color:rgb(0, 153, 232);
+        }
+      }
+      &__explanation {
+        padding: 10px;
+        height: 120px;
+        width: 590px;
+        border: 1px solid #f5f5f5;
+        outline: 0;
+        font-size: 16px;
+      }
+    }
+    .sale-content-option {
+      width: 620px;
+      height: 530px;
+      padding: 40px;
+      border-bottom: 2px solid #f5f5f5;
+      &__left {
+        float: left;
+      }
+      &__right {
+        width: 400px;
+        float: right;
+      }
+      &__category-form {
+        padding: 10px;
+        height: 50px;
+        border: 1px solid #f5f5f5;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        background-color: white;
+        appearance: button;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+      }
+      &__selectform-img {
+        position: absolute;
+        padding-left: 370px;
+        padding-top: 15px;
+        color: gray;
+      }
+      &__right-brand {
+        width: 400px;
+        float: right;
+        margin-top: 40px;
+        &__form {
+          padding: 10px;
+          height: 30px;
+          width: 380px;
+          border: 1px solid #f5f5f5;
+          border-radius: 5px;
+          outline: none;
+        }
+      }
+    }
+    .sale-content-price {
+      width: 620px;
+      padding: 40px;
+      background-color: white;
+      border-bottom: 2px solid #f5f5f5;
+      &__left {
+        float: left;
+      }
+      &__form {
+        width: 400px;
+        float: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 25px;
+        border-bottom: 2px solid #f5f5f5;
+        &__left {
+          width: 200px;
+          height: 35px;
+          padding-top: 10px;
+          font-weight: bold;
+          font-size: 14px;
+        }
+        &__right {
+          width: 170px;
+          height: 45px;
+          border: 1px solid #f5f5f5;
+          outline: 0;
+          border-radius: 5px;
+          text-align: right;
+          font-size: 16px;
+          margin-left: 10px;
+        }
+      }
+      &__fee {
+        width: 400px;
+        float: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-bottom: 2px solid #f5f5f5;
+        padding-top: 20px;
+        &__left {
+          width: 200px;
+          height: 35px;
+          font-size: 14px;
+        }
+        &__right {
+          width: 180px;
+          height: 45px;
+          text-align: right;
+          font-size: 12px;
+        }
+      }
+      &__gains {
+        width: 400px;
+        float: right;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 25px;
+        font-weight: bold;
+        padding-top: 20px;
+        &__left {
+          width: 200px;
+          height: 35px;
+          font-size: 16px;
+        }
+        &__right {
+          width: 180px;
+          height: 45px;
+          text-align: right;
+          font-size: 30px;
+        }
+      }
+    }
+    .sale-content-btnbox {
+      width: 620px;
+      padding: 40px;
+      background-color: white;
+      border-bottom: 2px solid #f5f5f5;
+      font-size: 14px;
+      &__display {
+        display: block;
+        margin-top: 40px;
+        height: 25px;
+        width: 620px;
+        padding: 10px 0;
+        font-size: 14px;
+        border: 1px solid transparent;
+        text-align: center;
+        background-color: #ea352d;
+        color: white;
+      }
+      &__remove {
+        display: block;
+        margin: 24px 170px 0;
+        height: 25px;
+        width: 280px;
+        padding: 10px 0;
+        font-size: 14px;
+        border: 1px solid transparent;
+        text-align: center;
+        background-color: #888888;
+        color: white;
+      }
+    }
+  }
+}
+.height-495 {
+  height: 495px!important;
+}
+
+.required-box-tag {
+  position: relative;
+}
+
+.required-box {
+  position: absolute;
+  width: 34px;
+  background-color: red;
+  color: white;
+  border-radius: 2px;
+  font-size: 13px;
+  margin-left: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+.any-box {
+  position: absolute;
+  width: 34px;
+  background-color: gray;
+  color: white;
+  border-radius: 2px;
+  font-size: 13px;
+  margin-left: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.title-font-gray {
+  color: #888888;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.title-font-black {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.apload-text {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.price-text {
+  padding-top: 13px;
+  font-size: 12px;
+}
+
+.question-image {
+  border-radius: 50%;
+  color: white;
+  background-color: #0099e8;
+  display: inline-block;
+  background-size: auto;
+  width: 14px;
+  height: 14px;
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+.underline-none {
+  text-decoration: none;
+  color: #0099e8;
+  &:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
