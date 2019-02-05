@@ -4,7 +4,10 @@ class UsersController < ApplicationController
 
   def logout
   end
-  
+
+  def profile
+  end
+
   def show
     require 'yaml'
     @value = YAML.load_file('config/prefecture-select.yml')
