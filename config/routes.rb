@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   resources :users do
     get 'logout', on: :collection
+    get 'profile', on: :collection
   end
   resources :users, only: [:index,:show]
   resources :items, only: [:index,:new]
