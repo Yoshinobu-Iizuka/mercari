@@ -1,0 +1,37 @@
+= render 'layouts/header'
+.double-large-container.margin-bottom_40
+  = render 'users/side-bar'
+  .l-single-container.mypage-confirm-box.end-of-contents
+    %h2 クレジットカード情報入力
+    .form-wrap
+      %form.user-confirm-form.creditcard-form
+        .user-confirm-form--column.form-group
+          %label{for: "card-num"}
+            %span.require カード番号
+          %input#card-num{name: "", placeholder: "半角数字のみ", type: "number"}/
+          %ul.card-logo
+            %li.card-logo--visa= image_tag('visa.svg')
+            %li.card-logo--master= image_tag('master.svg')
+            %li.card-logo--saison= image_tag('saison.svg')
+            %li.card-logo--jcb= image_tag('jcb.svg')
+            %li.card-logo--amex= image_tag('amex.svg')
+            %li.card-logo--diners= image_tag('diners.svg')
+            %li.card-logo--discover= image_tag('discover.svg')
+        .user-confirm-form--column.form-group
+          %label{for: "card-date-month"}
+            %span.require 有効期限
+          .select-wrap-small.column-parallel_left
+            %select#card-date-month.select-small{name: "", required: ""}
+              %option{value: ""} --
+            %span.unit 月
+          .select-wrap-small.column-parallel_left
+            %select.select-small{name: "", required: ""}
+              %option{value: ""} --
+            %span.unit 年
+        .user-confirm-form--column.form-group
+          %label{for: "card-num"}
+            %span.require セキュリティコード
+          %input#card-num{name: "", placeholder: "半角数字のみ", type: "number"}/
+          %p.card-text-right= link_to 'カード裏面の番号とは？','#'
+        %button.btn-small.background-color_red.margin-top_30{type: "submit"} 追加する
+= render partial: "layouts/sale_item_btn"
