@@ -461,7 +461,5 @@
                 1
             %p (税込)
     %p.link-to-all= link_to 'すべての商品を見る', "#"
-= link_to '#',class: "background-color_red put-item" do
-  .put-item--inner
-    %p 出品
-    %i.fas.fa-camera.icon-camera
+= render partial: "layouts/sale_item_btn"
+= render partial: "layouts/footer"
