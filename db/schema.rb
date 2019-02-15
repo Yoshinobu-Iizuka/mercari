@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190215094938) do
+ActiveRecord::Schema.define(version: 20190215101223) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "name",       limit: 65535
@@ -105,6 +105,8 @@ ActiveRecord::Schema.define(version: 20190215094938) do
     t.integer  "buyer_id"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+    t.integer  "brand_id"
+    t.index ["brand_id"], name: "index_items_on_brand_id", using: :btree
     t.index ["condition"], name: "index_items_on_condition", using: :btree
     t.index ["name"], name: "index_items_on_name", using: :btree
     t.index ["user_id"], name: "index_items_on_user_id", using: :btree
@@ -163,6 +165,7 @@ ActiveRecord::Schema.define(version: 20190215094938) do
   add_foreign_key "images", "items"
   add_foreign_key "item_categories", "categories"
   add_foreign_key "item_categories", "items"
+  add_foreign_key "items", "brands"
   add_foreign_key "items", "users"
   add_foreign_key "likes", "items"
   add_foreign_key "likes", "users"
