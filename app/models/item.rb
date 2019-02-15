@@ -6,4 +6,5 @@ class Item < ApplicationRecord
   has_many :comments
   has_many :categories, through: :item_categories
   has_many :item_categories
+  has_many :images
 end
