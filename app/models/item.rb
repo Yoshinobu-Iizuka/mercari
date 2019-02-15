@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  has_one :brand
+  belongs_to :brand
   has_one :trade
   has_one :card
   has_many :likes
