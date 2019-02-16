@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190216123252) do
+ActiveRecord::Schema.define(version: 20190216124000) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "name",       limit: 65535
@@ -65,11 +65,9 @@ ActiveRecord::Schema.define(version: 20190216123252) do
   end
 
   create_table "grandchild_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",              null: false
-    t.integer  "child_category_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.index ["child_category_id"], name: "index_grandchild_categories_on_child_category_id", using: :btree
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -158,7 +156,6 @@ ActiveRecord::Schema.define(version: 20190216123252) do
   add_foreign_key "comments", "trades"
   add_foreign_key "comments", "users"
   add_foreign_key "evaluations", "users"
-  add_foreign_key "grandchild_categories", "child_categories"
   add_foreign_key "images", "items"
   add_foreign_key "item_categories", "categories"
   add_foreign_key "item_categories", "items"
