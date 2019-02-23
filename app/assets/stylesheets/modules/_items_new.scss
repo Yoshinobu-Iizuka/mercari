@@ -65,6 +65,7 @@ main {
         float: left;
       }
       &__right {
+        position: relative;
         width: 400px;
         float: right;
       }
@@ -84,11 +85,18 @@ main {
       }
       &__selectform-img {
         position: absolute;
-        padding-left: 370px;
-        padding-top: 15px;
         color: gray;
+        top: 40px;
+        right:19px;
+        &--notitle {
+          top: 20px;
+          right: 19px;
+          color: gray;
+          position: absolute;
+        }
       }
       &__right-brand {
+        position: relative;
         width: 400px;
         float: right;
         margin-top: 40px;
@@ -99,6 +107,7 @@ main {
           border: 1px solid #f5f5f5;
           border-radius: 5px;
           outline: none;
+          margin-bottom: 0;
         }
       }
     }
