@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190216123252) do
+ActiveRecord::Schema.define(version: 20190216165736) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "name",       limit: 65535
@@ -65,11 +65,9 @@ ActiveRecord::Schema.define(version: 20190216123252) do
   end
 
   create_table "grandchild_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",              null: false
-    t.integer  "child_category_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.index ["child_category_id"], name: "index_grandchild_categories_on_child_category_id", using: :btree
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -78,15 +76,6 @@ ActiveRecord::Schema.define(version: 20190216123252) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["item_id"], name: "index_images_on_item_id", using: :btree
-  end
-
-  create_table "item_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "item_id"
-    t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["category_id"], name: "index_item_categories_on_category_id", using: :btree
-    t.index ["item_id"], name: "index_item_categories_on_item_id", using: :btree
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -104,8 +93,14 @@ ActiveRecord::Schema.define(version: 20190216123252) do
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
     t.integer  "brand_id"
+    t.integer  "category_id"
+    t.integer  "child_category_id"
+    t.integer  "grandchild_category_id"
     t.index ["brand_id"], name: "index_items_on_brand_id", using: :btree
+    t.index ["category_id"], name: "index_items_on_category_id", using: :btree
+    t.index ["child_category_id"], name: "index_items_on_child_category_id", using: :btree
     t.index ["condition"], name: "index_items_on_condition", using: :btree
+    t.index ["grandchild_category_id"], name: "index_items_on_grandchild_category_id", using: :btree
     t.index ["name"], name: "index_items_on_name", using: :btree
     t.index ["user_id"], name: "index_items_on_user_id", using: :btree
   end
@@ -149,6 +144,9 @@ ActiveRecord::Schema.define(version: 20190216123252) do
     t.datetime "remember_created_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "year",                                null: false
+    t.integer  "month",                               null: false
+    t.integer  "day",                                 null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
@@ -158,11 +156,11 @@ ActiveRecord::Schema.define(version: 20190216123252) do
   add_foreign_key "comments", "trades"
   add_foreign_key "comments", "users"
   add_foreign_key "evaluations", "users"
-  add_foreign_key "grandchild_categories", "child_categories"
   add_foreign_key "images", "items"
-  add_foreign_key "item_categories", "categories"
-  add_foreign_key "item_categories", "items"
   add_foreign_key "items", "brands"
+  add_foreign_key "items", "categories"
+  add_foreign_key "items", "child_categories"
+  add_foreign_key "items", "grandchild_categories"
   add_foreign_key "items", "users"
   add_foreign_key "likes", "items"
   add_foreign_key "likes", "users"

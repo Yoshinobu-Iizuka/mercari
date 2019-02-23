@@ -14,27 +14,21 @@
 |estimated_shipping_date|string|null: false|
 |user_id|reference|foreign_key: true|
 |buyer_id|reference|foreign_key: true|
+|brand_id|integer|
+|category_id|integer|
+|child_category_id|integer|
+|grandchild_category_id|integer|
 
 ### Association
-- has_one: brand
+- belongs_to: brand
+- belongs_to: category
+- belongs_to: child_category
+- belongs_to: grandchild_category
 - has_one: trade
 - has_one: card
 - has_many: likes
 - has_many: images
 - has_many: comments
-- has_many :categories, through: :item_categories
-- has_many :item_categories
-
-
-## item_categoriesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|item_id|reference|foreign_key: true|
-|category_id|reference|foreign_key: true|
-
-### Association
-- belongs_to :item
-- belongs_to :category
 
 ## categoriesテーブル
 |Column|Type|Options|
@@ -42,28 +36,23 @@
 |name|string|null: false|
 
 ### Association
-- has_many :items, through: :item_categories
-- has_many :item_categories
-- has_one :child_category
+- has_one :item
 
 ## child_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|category_id|reference|foreign_key: true|
 
 ### Association
-- belongs_to :category
-- has_one :grandchild_category
+- has_one :item
 
 ## grandchild_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|child_category_id|reference|foreign_key: true|
 
 ### Association
-- belongs_to :child_category
+- has_one :item
 
 
 ## commentsテーブル
@@ -86,10 +75,9 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|text||
-|item_id|reference|foreign_key: true|
 
 ### Association
-- belongs_to: item
+- had_one: item
 
 
 ## item_imagesテーブル
@@ -118,6 +106,9 @@
 |address_second|string|null: false|
 |telephone|integer|unique: true|
 |mail|string|unique: true|
+|year|integer|null: false|
+|month|integer|null: false|
+|day|integer|null: false|
 
 ### Association
 - has_many :items
