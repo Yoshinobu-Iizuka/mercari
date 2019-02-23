@@ -1,0 +1,16 @@
+.l-container.clearfix
+  .l-content
+    .profile
+      =form_tag do
+        .profile-head
+          %h2
+            プロフィール
+          .setting-profile
+            .setting-profile__icon
+              .setting-profile__icon--image
+                = image_tag "//mcdn.mercariapp.com/images/member_photo_noimage_thumb.png"
+              = text_field_tag :nickname, "", {class: "setting-profile__icon--nickname", placeholder: "例)AYA☆セール中"}
+        .profile-content
+          =text_area_tag :comment,"", {class: "profile-content__comment", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+          = link_to "変更する", users_path, method: :update, class: "profile-content__submit"
+  = render "side-bar"
