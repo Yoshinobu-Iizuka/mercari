@@ -1,0 +1,10 @@
+= render 'layouts/header'
+.l-container.clearfix
+  .l-content
+    .logout
+      .logout-container
+        .logout-container__button
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-container__button--content"
+  = render "side-bar"
+.margin-bottom_40
+= render 'layouts/footer'

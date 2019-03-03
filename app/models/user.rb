@@ -9,4 +9,7 @@ class User < ApplicationRecord
   has_many :evaluations
   has_many :likes
   has_many :trades
+
+  validates_confirmation_of :password
+
 end
