@@ -1,0 +1,25 @@
+.user-registration {
+  margin: 0 auto;
+  .form-wrap {
+    width: 320px;
+    margin: 0 auto;
+    .registration-notice {
+      font-size: 12px;
+      text-align: left;
+    }
+    .select-wrap-small {
+      margin: 8px 0 0;
+    }
+    .select-wrap-small:last-child {
+      margin-bottom: 8px!important;
+    }
+    .registration-select {
+      select {
+        width: 140px;
+      }
+    }
+    input[type=text] {
+      font-weight: normal;
+    }
+  }
+}
