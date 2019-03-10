@@ -34,7 +34,29 @@
     font-size: 50px;
   }
 }
+.single-slider-item {
+  @include tab {
+    display: none;
+  }
+}
+
 /* top-page */
+.top-image-sp {
+  display: none;
+  @include tab {
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-top: 90px;
+  }
+  img {
+    @include tab {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}
 .top-banner {
   width: 100%;
   .top-banner--inner {
@@ -95,6 +117,9 @@
 }
 .top-items {
   width: 940px;
+  @include tab {
+    width: 100%;
+  }
   h3 {
     font-size: 22px;
     margin: 26px 0;
@@ -107,15 +132,34 @@
   .item-line {
     display: flex;
     justify-content: space-between;
+    @include tab {
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0 30px;
+    }
+    @include sp {
+      flex-direction: column;
+      padding: 0 20px;
+    }
     a {
       color: #000000;
       text-decoration: none;
       display: inline-block;
+      @include tab {
+        width: 48%;
+        margin: 0 0 50px;
+      }
+      @include sp {
+        width: 100%;
+      }
     }
   }
   .link-to-all {
     text-align: right;
     padding: 20px 0 30px;
+    @include tab {
+      padding: 0 20px 30px;
+    }
     a {
       color: #0099e8;
       text-decoration: none;
@@ -129,19 +173,35 @@
 }
 .items-box {
   background-color: #ffffff;
+  @include tab {
+    // width: 350px;
+    // height: 350px;
+    display: inline-block;
+    width: 100%;
+  }
   &--image {
     max-height: 213px;
     margin: 0;
     padding: 0;
+    @include tab {
+      max-height: 350px;
+    }
     img {
       width: 100%;
       width: 213px;
       height: 213px;
       object-fit: cover;
+      @include tab {
+        width: 100%;
+        height: 250px;
+      }
     }
   }
   .item--caption {
     padding: 18px 16px 8px;
+    @include tab {
+      background-color: #fff;
+    }
     h4 {
       text-align: left;
       font-weight: 400;
@@ -149,6 +209,9 @@
       overflow: hidden;
       height: 3em;
       position: relative;
+      @include tab {
+        position: inherit;
+      }
       &::after {
         content: '';
         display: block;
@@ -158,6 +221,9 @@
         bottom: 0;
         right: 0;
         background: linear-gradient(to right, rgba(255,255,255,0), #fff 72%);
+        @include tab {
+          display: none;
+        }
       }
     }
     div {
@@ -192,6 +258,9 @@
   right: 32px;
   z-index: 1000;
   border-radius: 50%;
+  @include tab {
+    display: none;
+  }
   &--inner {
     display: flex;
     width: 160px;

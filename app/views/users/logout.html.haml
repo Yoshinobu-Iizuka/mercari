@@ -1,3 +1,4 @@
+= render 'layouts/header_mypage'
 .l-container.clearfix
   .l-content
     .logout
@@ -5,3 +6,4 @@
         .logout-container__button
           = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-container__button--content"
   = render "side-bar"
+= render partial: "layouts/footer"

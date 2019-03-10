@@ -1,6 +1,10 @@
 .l-container {
   margin: 40px auto 0;
   width: 1020px;
+  @include tab {
+    width: 90%;
+    margin: 130px auto 30px;
+  }
   &.clearfix::after {
     content: "";
     display: block;
@@ -11,6 +15,9 @@
 .l-content {
   float: right;
   width: 700px;
+  @include tab {
+    width: 100%;
+  }
   .mypage-user {
     position: relative;
     background: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?78831722);
