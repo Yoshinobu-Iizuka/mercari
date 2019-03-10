@@ -43,6 +43,11 @@
       padding: 10px;
       border: 1px solid #ccc;
       line-height: 1.5;
+      @include tab {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+      }
     }
     &__submit {
       margin: 16px 0 0;

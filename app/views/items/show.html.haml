@@ -104,7 +104,7 @@
     = link_to "#" do
       %span.shere-pinterest
         %i.fab.fa-pinterest
-%section.top-items.container.margin-top_40
+%section.top-items.container.margin-top_40.sp-none
   %h3.text-align_left.users-item-head
     = link_to 'ユーザさんのその他の出品', "#", class: 'blue-link'
   .item-line-detail.item-line.container
@@ -164,7 +164,7 @@
             %p.like
               %i.far.fa-heart.like-icon 1
           %p (税込)
-%section.top-items.container.margin-top_40.last-contents
+%section.top-items.container.margin-top_40.last-contents.sp-none
   %h3.text-align_left.users-item-head
     = link_to 'その他の出品', "#", class: 'blue-link'
   .item-line-detail.item-line.container
@@ -224,4 +224,4 @@
             %p.like
               %i.far.fa-heart.like-icon 1
           %p (税込)
-= render 'layouts/footer'
+= render partial: "layouts/footer"
