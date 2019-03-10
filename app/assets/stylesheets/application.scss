@@ -10,6 +10,7 @@
 @import "slick";
 @import "slick-theme";
 @import "./modules/items_index";
+@import "./modules/items_new";
 @import "./modules/items_show";
 @import "./modules/users_mypage";
 @import "./modules/signup";
@@ -18,3 +19,6 @@
 @import "./modules/logout";
 @import "./modules/mypage_confirm";
 @import "./modules/user_registration";
+@import "./modules/profile";
+@import "./modules/creditcard_registration";
+

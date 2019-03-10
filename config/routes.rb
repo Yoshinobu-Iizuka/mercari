@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'items#index'
+
   resources :items do
     get 'confirm', on: :collection
   end
@@ -8,5 +9,9 @@ Rails.application.routes.draw do
     get 'logout', on: :collection
     get 'profile', on: :collection
   end
+
+  resources :creditcards, only: [:index]
+  resources :items_buy_confirms, only: [:index]
+  
 end
 

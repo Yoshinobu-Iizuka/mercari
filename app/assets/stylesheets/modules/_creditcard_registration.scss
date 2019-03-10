@@ -1,0 +1,84 @@
+.creditcard-form {
+  padding: 0 126px;
+  .card-logo {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li + li {
+      margin-left: 10px;
+    }
+    &--visa {
+      width: 49px;
+    }
+    &--master {
+      width: 34px;
+    }
+    &--saison {
+      width: 30px;
+    }
+    &--jcb {
+      width: 32px;
+    }
+    &--amex {
+      width: 21px;
+    }
+    &--diners {
+      width: 32px;
+    }
+    &--discover {
+      width: 32px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .select-wrap-small {
+    position: relative;
+    width: 138px;
+    margin-top: 8px;
+    &::before {
+      z-index: 1;
+      position: absolute;
+      right: 40px;
+      top: 0;
+      content: "\f078";
+      font-family: "font Awesome 5 Free";
+      font-weight: 900;
+      line-height: 43px;
+      color: #7F878C;
+      pointer-events: none;
+    }
+    .select-small {
+      width: 112px!important;
+    }
+  }
+  .column-parallel_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .unit {
+    margin-left: 10px;
+  }
+  .card-text-right {
+    width: 100%;
+    text-align: right;
+    position: relative;
+    &::before {
+      content: "\f059";
+      font-family: "font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 14px;
+      color: $font-color_link;
+    }
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      color: $font-color_link;
+    }
+  }
+  button {
+    color: $font-color_white;
+  }
+}
