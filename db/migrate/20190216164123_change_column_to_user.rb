@@ -16,5 +16,4 @@ class ChangeColumnToUser < ActiveRecord::Migration[5.0]
       change_column :users, :address_second, :string,     null: false
       change_column :users ,:telephone, :string,          null: false
     end
-  end
 end
