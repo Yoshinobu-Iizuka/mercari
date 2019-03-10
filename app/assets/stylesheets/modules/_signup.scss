@@ -27,7 +27,6 @@
   padding: 64px 0;
   a {
     text-decoration: none;
-    color: $font-color_black;
   }
   a + a {
     margin-top: 10px;
@@ -55,6 +54,7 @@
     top: 50%;
     left: 16px;
     transform: translate(0, -50%);
+    color: $font-color_white;
   }
 }
 .signup--google {
@@ -67,6 +67,7 @@
     top: 50%;
     left: 16px;
     transform: translate(0, -50%);
+    color: $font-color_white;
   }
 }
 .user-sign-up--footer {
