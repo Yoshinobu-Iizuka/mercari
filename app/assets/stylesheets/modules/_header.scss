@@ -106,6 +106,23 @@ header {
               margin: 0 0 0 8px;
             }
           }
+          .btn-login,.btn-signup {
+            border-radius: 4px;
+            line-height: 30px;
+            font-size: 14px;
+            padding: 0 10px;
+            margin-bottom: 5px;
+          }
+          .btn-login {
+            background-color: $bg-color_red;
+            color: $font-color_white;
+            border: 1px solid $bg-color_red;
+          }
+          .btn-signup {
+            background-color: $font-color_white;
+            color: $bg-color_blue;
+            border: 1px solid $bg-color_blue;
+          }
         }
         li + li {
           padding-left: 16px;

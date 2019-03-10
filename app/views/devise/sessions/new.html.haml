@@ -12,11 +12,11 @@
     = link_to "#", class: 'btn-small signup--google' do
       %i.fab.fa-google-plus-g.icon-googleplus
       Googleで登録
-  %form.login-form{action: "", method: "post"}
+  = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'login-form'}) do |f|
     %div
-      %input{name: "", placeholder: "メールアドレス", type: "text"}/
+      = f.email_field :email, autocomplete: 'off', autofocus: true, placeholder: 'メールアドレス'
     %div
-      %input{name: "", placeholder: "パスワード", type: "password"}/
+      = f.password_field :password, autocomplete: 'off', autofocus: true, placeholder: 'パスワード'
     %button.btn-small.login-form--submit.background-color_red{type: "submit"} ログイン
   %p.forget-password
     = link_to "パスワードをお忘れの方",'#',class: 'blue-link'

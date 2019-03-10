@@ -30,18 +30,24 @@
                 %a{href: "#"} ブランド一覧
       .header-bottom--right
         %ul.links
-          %li
-            %a{href: "#"}
-              %span
-                %img{alt: "", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/members/165510990.jpg?1526691293"}/
-              %p マイページ
-          %li
-            %a{href: "#"}
-              %span.header-icon
-                %i.far.fa-bell
-              %p お知らせ
-          %li
-            %a{href: "#"}
-              %span.header-icon
-                %i.fas.fa-check
-              %p やることリスト
+          - if user_signed_in?
+            %li
+              %a{href: "#"}
+                %span
+                  %img{alt: "", src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/members/165510990.jpg?1526691293"}/
+                %p マイページ
+            %li
+              %a{href: "#"}
+                %span.header-icon
+                  %i.far.fa-bell
+                %p お知らせ
+            %li
+              %a{href: "#"}
+                %span.header-icon
+                  %i.fas.fa-check
+                %p やることリスト
+          - else
+            %li
+              = link_to "ログイン", new_user_session_path, class: 'btn-login'
+            %li
+              = link_to "新規会員登録", new_user_registration_path, class: 'btn-signup'
