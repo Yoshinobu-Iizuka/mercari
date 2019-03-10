@@ -66,6 +66,8 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'rspec-rails'
   gem 'pry-rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 gem 'mini_magick'
@@ -78,3 +80,4 @@ gem 'devise'
 group :development do
   gem 'web-console', '~> 2.0'
 end
+

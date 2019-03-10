@@ -118,11 +118,20 @@
 .margin-bottom_40 {
   margin-bottom: 40px;
 }
+.margin-bottom_64 {
+  margin-bottom: 64px;
+}
 .font-color_black {
   color: $font-color_black;
 }
 .font-color_blue {
   color: $bg-color_blue;
+}
+.font-color_white {
+  color: $font-color_white;
+}
+.font-color_lightgray {
+  color: $bg-color_gray;
 }
 .font-color_light-gray {
   background-color: $bg-color_light-gray;

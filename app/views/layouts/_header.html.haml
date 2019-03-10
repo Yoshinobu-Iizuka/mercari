@@ -30,6 +30,7 @@
                 %a{href: "#"} ブランド一覧
       .header-bottom--right
         %ul.links
+          - if user_signed_in?
           %li
             %a{href: "#"}
               %span
@@ -60,6 +61,11 @@
             ブランドから探す
           %li
             出品する
+          - else
+            %li
+              = link_to "ログイン", new_user_session_path, class: 'btn-login'
+            %li
+              = link_to "新規会員登録", new_user_registration_path, class: 'btn-signup'
       %button{id: "nav-btn", type: "button", class: "hamburger"}
         %span.bdr
         %span.bdr
