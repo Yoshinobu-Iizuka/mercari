@@ -3,6 +3,14 @@
   width: 100%;
   text-align: center;
   padding: 40px 0;
+  @include tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inherit;
+    padding-top: 40px;
+    position: inherit;
+  }
   &--logo {
     width: 185px;
     display: inline-block;
@@ -46,7 +54,7 @@
 }
 .signup--facebook {
   background-color: $facebook-color;
-  color: $font-color_white;
+  color: $font-color_white!important;
   position: relative;
   .icon-facebook {
     font-size: 18px;
@@ -59,7 +67,7 @@
 }
 .signup--google {
   background-color: $google-color;
-  color: $font-color_white;
+  color: $font-color_white!important;
   position: relative;
   .icon-googleplus {
     font-size: 18px;
@@ -78,6 +86,9 @@
     width: 700px;
     display: flex;
     justify-content: center;
+    @include tab {
+      width: 100%;
+    }
     li + li {
       margin-left: 15px;
     }

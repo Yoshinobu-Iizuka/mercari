@@ -15,6 +15,9 @@
   margin: 0 auto;
   width: 700px;
   background-color: $bg-item-card-color;
+  @include tab {
+    width: 95%;
+  }
 }
 .items-box {
   width: 213px;
@@ -39,6 +42,9 @@
   border: 1px solid transparent;
   text-align: center;
   background-color: $bg-color_base-gray;
+  @include tab {
+    width: 90%;
+  }
 }
 .badge-num {
   background-color: $bg-color_red;
@@ -177,4 +183,10 @@
 }
 .end-of-contents {
   padding-bottom: 60px;
+}
+
+@include tab {
+  .sp-none {
+    display: none;
+  }
 }

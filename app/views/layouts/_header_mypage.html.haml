@@ -1,0 +1,112 @@
+%header
+  .header-inner
+    .header-inner--top
+      .logo
+        %img{alt: "mercari", src: "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?817106341"}/
+      .search-form.search-form-width
+        %form
+          %input.search-form-width{name: "search-item", placeholder: "キーワードから探す", type: "text"}/
+          %button
+            %i.fas.fa-search.search-icon-size
+    .header-bottom
+      .header-bottom--left
+        %ul.header-search-item.menu
+          %li
+            %a{href: "#"} カテゴリーから探す
+          %li.menu__single.padding-left_15
+            %a.init-bottom{href: "#"} ブランドから探す
+            %ul.menu__second-level
+              %li
+                %a{href: "#"} シャネル
+              %li
+                %a{href: "#"} ナイキ
+              %li
+                %a{href: "#"} ルイ ヴィトン
+              %li
+                %a{href: "#"} シュプリーム
+              %li
+                %a{href: "#"} アディダス
+              %li
+                %a{href: "#"} ブランド一覧
+      .header-bottom--right
+        %ul.links
+          %li
+            %a{href: "#"}
+              %span
+                %img{alt: "", src: "https://mcdn.mercariapp.com/images/member_photo_noimage_thumb.png"}/
+              %p マイページ
+          %li
+            %a{href: "#"}
+              %span.header-icon
+                %i.far.fa-bell
+              %p お知らせ
+          %li
+            %a{href: "#"}
+              %span.header-icon
+                %i.fas.fa-check
+              %p やることリスト
+    #nav-wrapper
+      %nav.nav-menu
+        %ul
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              マイページ
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              お知らせ
+              .badge-num.sp-none
+                5
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              やることリスト
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              いいね！一覧
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              出品する
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              出品した商品 - 出品中
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              出品した商品 - 取引中
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              出品した商品 - 売却済み
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              購入した商品-取引中
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              購入した商品-過去の取引
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              ニュース一覧
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              評価一覧
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              ガイド
+              %i.fas.fa-angle-right
+          %li
+            = link_to users_path, class: "mypage-nav-list_item" do
+              お問い合わせ
+              %i.fas.fa-angle-right
+      %button{id: "nav-btn", type: "button", class: "hamburger"}
+        %span.bdr
+        %span.bdr
+        %span.bdr
