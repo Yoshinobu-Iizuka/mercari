@@ -25,4 +25,4 @@ $(function () {
     $wrapper.classList.remove('nav-open');
   }
 
-})();
+});
