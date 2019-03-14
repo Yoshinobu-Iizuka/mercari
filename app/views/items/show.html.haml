@@ -1,21 +1,22 @@
 = render partial: "layouts/header"
 %section
   .l-single-container.item-card-details
-    %h2 ショートパンツ
+    %h2
+      = @item.name
     .item-card-details--top
       .item-image
         .item-image--main
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag(@images[0]['name'], alt: '商品タイトル商品タイトル商品タイトル')
         .item-image--sub
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          / - num = 1
+          - @images.each do|image|
+            = image_tag(image.name, alt: '商品タイトル商品タイトル商品タイトル')
       .item-table
         %table
           %tr
             %th 出品者
             %td
-              = link_to 'ユーザ名', "#"
+              = link_to @item.user.nickname, "#"
               %br/
               .user-rating
                 %span
@@ -30,44 +31,52 @@
           %tr
             %th カテゴリー
             %td.line-height_17
-              = link_to 'レディース', "#"
+              = link_to @item.category.name, "#"
               %br/
               %span.child-category
-                = link_to '中カテゴリ', "#"
+                = link_to @item.child_category.name, "#"
               %br/
               %span.child-category
-                = link_to '小カテゴリ', "#"
+                = link_to @item.grandchild_category.name, "#"
           %tr
             %th ブランド
             %td
-              = link_to 'ブランド', "#"
+              = link_to @item.brand.name, "#"
           %tr
             %th 商品のサイズ
-            %td FREE SIZE
+            %td
+              = @item.size
           %tr
             %th 商品の状態
-            %td 目立った傷や汚れなし
+            %td
+              = @item.condition
           %tr
             %th 配送料の負担
-            %td 送料込み(出品者負担)
+            %td
+              = @item.shipping_charge_borne
           %tr
             %th 発送の方法
-            %td 未定
+            %td
+              = @item.shipping_method
           %tr
             %th 発送元地域
             %td
-              = link_to '宮城県', "#"
+              = link_to @item.shipment_source_area, "#"
           %tr
             %th 発送日の目安
-            %td 1~2日で発送
+            %td
+              = @item.estimated_shipping_date
     .item-card-details--price
-      %span.item-price ¥ 9,999,999
+      %span.item-price
+        ¥
+        = @item.price
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
     .btn-buy.btn-large.background-color_red
       = link_to '購入画面に進む', "#"
     .item-card-details--comment
-      %p フリーサイズです。命に比べたら安いと思います。買ってください。ああああああああああああ
+      %p
+        = @item.details
     .item-button-container
       .item-btn
         %button.like.item-button{type: "button"}
@@ -89,10 +98,18 @@
       %button.message-submit.btn-large{type: "submit"} コメントする
 %section
   .item-link-area
-    %span.prev-item
-      = link_to '前のアイテム前のアイテム前のアイテム前のアイテム前のアイテム前のアイテム前のアイテム', "#", class: 'blue-link'
-    %span.next-item
-      = link_to '次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム', "#", class: 'blue-link'
+    -if @item.previous.present?
+      %span.prev-item
+        = link_to @item.previous.name, @item.previous, class: 'blue-link'
+    -else
+      %span.prev-item
+        商品がありません！
+    - if @item.next.present?
+      %span.next-item
+        = link_to @item.next.name, @item.next, class: 'blue-link'
+    - else
+      %span.next-item
+        商品がありません！
 %section
   .l-single-container.sns-area
     = link_to "#" do
@@ -108,119 +125,123 @@
   %h3.text-align_left.users-item-head
     = link_to 'ユーザさんのその他の出品', "#", class: 'blue-link'
   .item-line-detail.item-line.container
-    = link_to '#' do
-      .items-box
-        %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-        .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-          %div
-            %p.price ¥ 800
-            %p.like
-              %i.far.fa-heart.like-icon 1
-          %p (税込)
-    = link_to '#' do
-      .items-box
-        %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-        .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-          %div
-            %p.price ¥ 800
-            %p.like
-              %i.far.fa-heart.like-icon 1
-          %p (税込)
-    = link_to '#' do
-      .items-box
-        %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-        .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-          %div
-            %p.price ¥ 800
-            %p.like
-              %i.far.fa-heart.like-icon 1
-          %p (税込)
-  .item-line-detail.item-line.container
-    = link_to '#' do
-      .items-box
-        %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-        .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-          %div
-            %p.price ¥ 800
-            %p.like
-              %i.far.fa-heart.like-icon 1
-          %p (税込)
-    = link_to '#' do
-      .items-box
-        %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-        .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-          %div
-            %p.price ¥ 800
-            %p.like
-              %i.far.fa-heart.like-icon 1
-          %p (税込)
-%section.top-items.container.margin-top_40.last-contents
-  %h3.text-align_left.users-item-head
-    = link_to 'その他の出品', "#", class: 'blue-link'
-  .item-line-detail.item-line.container
-    = link_to '#', class: 'sold-out' do
-      .items-box
-        %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-        .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-          %div
-            %p.price ¥ 800
-            %p.like
-              %i.far.fa-heart.like-icon 1
-          %p (税込)
-    = link_to '#' do
-      .items-box
-        %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-        .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-          %div
-            %p.price ¥ 800
-            %p.like
-              %i.far.fa-heart.like-icon 1
-          %p (税込)
-    = link_to '#' do
-      .items-box
-        %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-        .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-          %div
-            %p.price ¥ 800
-            %p.like
-              %i.far.fa-heart.like-icon 1
-          %p (税込)
-  .item-line-detail.item-line.container
-    = link_to '#' do
-      .items-box
-        %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-        .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-          %div
-            %p.price ¥ 800
-            %p.like
-              %i.far.fa-heart.like-icon 1
-          %p (税込)
-    = link_to '#' do
-      .items-box
-        %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-        .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-          %div
-            %p.price ¥ 800
-            %p.like
-              %i.far.fa-heart.like-icon 1
-          %p (税込)
+    - if @items
+      - @items.each do |item|
+        = link_to '#' do
+          .items-box
+            %figure.items-box--image
+              = image_tag(@list[item.id]['name'], alt: '商品タイトル商品タイトル商品タイトル')
+            .item--caption
+              %h4
+                = item.name
+              %div
+                %p.price
+                  = item.price
+                %p.like
+                  %i.far.fa-heart.like-icon 1
+              %p (税込)
+        / = link_to '#' do
+/       .items-box
+/         %figure.items-box--image
+/           = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+/         .item--caption
+/           %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+/           %div
+/             %p.price ¥ 800
+/             %p.like
+/               %i.far.fa-heart.like-icon 1
+/           %p (税込)
+/     = link_to '#' do
+/       .items-box
+/         %figure.items-box--image
+/           = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+/         .item--caption
+/           %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+/           %div
+/             %p.price ¥ 800
+/             %p.like
+/               %i.far.fa-heart.like-icon 1
+/           %p (税込)
+/   .item-line-detail.item-line.container
+/     = link_to '#' do
+/       .items-box
+/         %figure.items-box--image
+/           = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+/         .item--caption
+/           %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+/           %div
+/             %p.price ¥ 800
+/             %p.like
+/               %i.far.fa-heart.like-icon 1
+/           %p (税込)
+/     = link_to '#' do
+/       .items-box
+/         %figure.items-box--image
+/           = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+/         .item--caption
+/           %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+/           %div
+/             %p.price ¥ 800
+/             %p.like
+/               %i.far.fa-heart.like-icon 1
+/           %p (税込)
+/ %section.top-items.container.margin-top_40.last-contents
+/   %h3.text-align_left.users-item-head
+/     = link_to 'その他の出品', "#", class: 'blue-link'
+/   .item-line-detail.item-line.container
+/     = link_to '#', class: 'sold-out' do
+/       .items-box
+/         %figure.items-box--image
+/           = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+/         .item--caption
+/           %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+/           %div
+/             %p.price ¥ 800
+/             %p.like
+/               %i.far.fa-heart.like-icon 1
+/           %p (税込)
+/     = link_to '#' do
+/       .items-box
+/         %figure.items-box--image
+/           = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+/         .item--caption
+/           %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+/           %div
+/             %p.price ¥ 800
+/             %p.like
+/               %i.far.fa-heart.like-icon 1
+/           %p (税込)
+/     = link_to '#' do
+/       .items-box
+/         %figure.items-box--image
+/           = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+/         .item--caption
+/           %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+/           %div
+/             %p.price ¥ 800
+/             %p.like
+/               %i.far.fa-heart.like-icon 1
+/           %p (税込)
+/   .item-line-detail.item-line.container
+/     = link_to '#' do
+/       .items-box
+/         %figure.items-box--image
+/           = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+/         .item--caption
+/           %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+/           %div
+/             %p.price ¥ 800
+/             %p.like
+/               %i.far.fa-heart.like-icon 1
+/           %p (税込)
+/     = link_to '#' do
+/       .items-box
+/         %figure.items-box--image
+/           = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+/         .item--caption
+/           %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+/           %div
+/             %p.price ¥ 800
+/             %p.like
+/               %i.far.fa-heart.like-icon 1
+/           %p (税込)
