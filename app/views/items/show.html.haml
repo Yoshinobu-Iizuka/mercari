@@ -1,46 +1,43 @@
-= render partial: "layouts/header"
+= render partial: "layouts/header2"
 %section
   .l-single-container.item-card-details
-    %h2 ショートパンツ
+    %h2 ハンサム5人
     .item-card-details--top
       .item-image
         .item-image--main
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('https://base-ec2.akamaized.net/images/item/origin/26b44e0e8c8c1079cedf032f7c48b276.png', alt: 'ハンサム')
         .item-image--sub
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
       .item-table
         %table
           %tr
             %th 出品者
             %td
-              = link_to 'ユーザ名', "#"
+              = link_to 'しょうみゆ', "/users/"
               %br/
               .user-rating
                 %span
                   %i.fas.fa-laugh.icon-face-good
-                  110
+                  0
                 %span
                   %i.fas.fa-meh.icon-face-normal
-                  10
+                  0
                 %span
                   %i.fas.fa-frown.icon-face-bad
-                  15
+                  0
           %tr
             %th カテゴリー
             %td.line-height_17
-              = link_to 'レディース', "#"
+              = link_to 'レディース', ""
               %br/
               %span.child-category
-                = link_to '中カテゴリ', "#"
+                = link_to '小物', "#"
               %br/
               %span.child-category
-                = link_to '小カテゴリ', "#"
+                = link_to '財布', "#"
           %tr
             %th ブランド
             %td
-              = link_to 'ブランド', "#"
+              = link_to '学園', "#"
           %tr
             %th 商品のサイズ
             %td FREE SIZE
@@ -49,31 +46,31 @@
             %td 目立った傷や汚れなし
           %tr
             %th 配送料の負担
-            %td 送料込み(出品者負担)
+            %td 着払い
           %tr
             %th 発送の方法
             %td 未定
           %tr
             %th 発送元地域
             %td
-              = link_to '宮城県', "#"
+              = link_to '東京都', "#"
           %tr
             %th 発送日の目安
             %td 1~2日で発送
     .item-card-details--price
-      %span.item-price ¥ 9,999,999
+      %span.item-price ¥ 836
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
     .btn-buy.btn-large.background-color_red
-      = link_to '購入画面に進む', "#"
+      = link_to '購入画面に進む', "/items_buy_confirms/"
     .item-card-details--comment
-      %p フリーサイズです。命に比べたら安いと思います。買ってください。ああああああああああああ
+      %p ボーイズラブ
     .item-button-container
       .item-btn
         %button.like.item-button{type: "button"}
           %i.far.fa-heart.icon-like
           %span いいね!
-          %span 20
+          %span 0
         %button.spam.item-button{type: "button"}
           %i.far.fa-flag.icon-flag
           %span 不適切な商品の報告
@@ -90,9 +87,9 @@
 %section
   .item-link-area
     %span.prev-item
-      = link_to '前のアイテム前のアイテム前のアイテム前のアイテム前のアイテム前のアイテム前のアイテム', "#", class: 'blue-link'
+      = link_to '【美品】JINASIS トップス 送料無料 早いもの勝ち☆', "#", class: 'blue-link'
     %span.next-item
-      = link_to '次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム次のアイテム', "#", class: 'blue-link'
+      = link_to 'ユニクロ クロップドパンツ（新品）', "#", class: 'blue-link'
 %section
   .l-single-container.sns-area
     = link_to "#" do
@@ -106,63 +103,63 @@
         %i.fab.fa-pinterest
 %section.top-items.container.margin-top_40.sp-none
   %h3.text-align_left.users-item-head
-    = link_to 'ユーザさんのその他の出品', "#", class: 'blue-link'
+    = link_to 'しょうみゆさんのその他の出品', "#", class: 'blue-link'
   .item-line-detail.item-line.container
     = link_to '#' do
       .items-box
         %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('https://static.mercdn.net/item/detail/orig/photos/m77117938064_1.jpg?1552542342', alt: 'トップス')
         .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %h4 【美品】JINASIS トップス 送料無料 早いもの勝ち☆
           %div
-            %p.price ¥ 800
+            %p.price ¥ 1200
             %p.like
-              %i.far.fa-heart.like-icon 1
+              %i.far.fa-heart.like-icon 0
           %p (税込)
     = link_to '#' do
       .items-box
         %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('https://static.mercdn.net/thumb/photos/m47273215116_1.jpg?1550979771', alt: '')
         .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %h4 ユニクロ クロップドパンツ（新品）
           %div
-            %p.price ¥ 800
+            %p.price ¥ 1000
             %p.like
-              %i.far.fa-heart.like-icon 1
+              %i.far.fa-heart.like-icon 0
           %p (税込)
     = link_to '#' do
       .items-box
         %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('https://static.mercdn.net/thumb/photos/m45763189456_1.jpg?1552573008', alt: '')
         .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %h4 ユニクロのスカート
           %div
             %p.price ¥ 800
             %p.like
-              %i.far.fa-heart.like-icon 1
+              %i.far.fa-heart.like-icon 0
           %p (税込)
   .item-line-detail.item-line.container
     = link_to '#' do
       .items-box
         %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('https://static.mercdn.net/thumb/photos/m93020523625_1.jpg?1552573936', alt: '')
         .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %h4 まつげ美容液 4割残
           %div
-            %p.price ¥ 800
+            %p.price ¥ 500
             %p.like
-              %i.far.fa-heart.like-icon 1
+              %i.far.fa-heart.like-icon 0
           %p (税込)
     = link_to '#' do
       .items-box
         %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('https://static.mercdn.net/thumb/photos/m67865760866_1.jpg?1552573931', alt: '')
         .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %h4 ほぼ未使用ファンデーション
           %div
-            %p.price ¥ 800
+            %p.price ¥ 2000
             %p.like
-              %i.far.fa-heart.like-icon 1
+              %i.far.fa-heart.like-icon 0
           %p (税込)
 %section.top-items.container.margin-top_40.last-contents.sp-none
   %h3.text-align_left.users-item-head
@@ -171,57 +168,57 @@
     = link_to '#', class: 'sold-out' do
       .items-box
         %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('https://static.mercdn.net/thumb/photos/m67865760866_1.jpg?1552573931', alt: '')
         .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %h4 ほぼ未使用ファンデーション
           %div
-            %p.price ¥ 800
+            %p.price ¥ 2000
             %p.like
-              %i.far.fa-heart.like-icon 1
+              %i.far.fa-heart.like-icon 0
           %p (税込)
     = link_to '#' do
       .items-box
         %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('https://static.mercdn.net/thumb/photos/m24458174264_1.jpg?1552573919', alt: '')
         .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %h4 KATE シャドー
           %div
-            %p.price ¥ 800
+            %p.price ¥ 1500
             %p.like
-              %i.far.fa-heart.like-icon 1
+              %i.far.fa-heart.like-icon 0
           %p (税込)
     = link_to '#' do
       .items-box
         %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('https://static.mercdn.net/thumb/photos/m68161302638_1.jpg?1552550238', alt: '')
         .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %h4 アイシャドーパレット
           %div
-            %p.price ¥ 800
+            %p.price ¥ 1200
             %p.like
-              %i.far.fa-heart.like-icon 1
+              %i.far.fa-heart.like-icon 0
           %p (税込)
   .item-line-detail.item-line.container
     = link_to '#' do
       .items-box
         %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('https://static.mercdn.net/thumb/photos/m75269981477_1.jpg?1552377727', alt: '')
         .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %h4 香水シャネル
           %div
-            %p.price ¥ 800
+            %p.price ¥ 5000
             %p.like
-              %i.far.fa-heart.like-icon 1
+              %i.far.fa-heart.like-icon 0
           %p (税込)
     = link_to '#' do
       .items-box
         %figure.items-box--image
-          = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
+          = image_tag('https://static.mercdn.net/thumb/photos/m18162106385_1.jpg?1552575358', alt: '')
         .item--caption
-          %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
+          %h4 シャネルネックレス
           %div
-            %p.price ¥ 800
+            %p.price ¥ 12000
             %p.like
-              %i.far.fa-heart.like-icon 1
+              %i.far.fa-heart.like-icon 0
           %p (税込)
 = render partial: "layouts/footer"

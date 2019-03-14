@@ -1,15 +1,23 @@
 = render partial: "layouts/users_header"
 %section
-  .l-single-container.signup-title
-    %h2 新規会員登録
-  .l-single-container.user-action-btn
-    = link_to "#", class: 'btn-small signup--mail font-color_black' do
-      %i.far.fa-envelope.icon-mail
-      メールアドレスで登録
-    = link_to "#", class: 'btn-small signup--facebook font-color_white' do
+  .signin-registration-btn.sign-bg
+    %p アカウントをお持ちでない方はこちら
+    = link_to "#", class: 'btn-small registration--new' do
+      新規会員登録
+%section.sign-bg.login-area
+  .user-signin-btn
+    = link_to "#", class: 'btn-small signup--facebook' do
       %i.fab.fa-facebook.icon-facebook
       facebookで登録
-    = link_to "#", class: 'btn-small signup--google font-color_white' do
+    = link_to "#", class: 'btn-small signup--google' do
       %i.fab.fa-google-plus-g.icon-googleplus
       Googleで登録
+  .login-form
+    %div
+      %input{type: 'text', autocomplete: 'off', autofocus: true, placeholder: 'メールアドレス'}
+    %div
+      %input{type: 'password', autocomplete: 'off', autofocus: true, placeholder: 'パスワード'}
+    = link_to "ログイン", "/items/itemsuser", class: 'btn-small login-form--submit background-color_red'
+  %p.forget-password
+    = link_to "パスワードをお忘れの方",'#',class: 'blue-link'
 = render partial: "layouts/users_footer"
