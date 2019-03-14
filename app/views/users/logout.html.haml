@@ -4,6 +4,6 @@
     .logout
       .logout-container
         .logout-container__button
-          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-container__button--content"
+          = link_to "ログアウト", "/", class: "logout-container__button--content"
   = render "side-bar"
 = render partial: "layouts/footer"

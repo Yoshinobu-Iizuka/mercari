@@ -17,7 +17,7 @@
       = f.email_field :email, autocomplete: 'off', autofocus: true, placeholder: 'メールアドレス'
     %div
       = f.password_field :password, autocomplete: 'off', autofocus: true, placeholder: 'パスワード'
-    %button.btn-small.login-form--submit.background-color_red{type: "submit"} ログイン
+    = link_to "ログイン", "items/index", class: 'btn-small login-form--submit background-color_red'
   %p.forget-password
     = link_to "パスワードをお忘れの方",'#',class: 'blue-link'
 = render partial: "layouts/users_footer"
