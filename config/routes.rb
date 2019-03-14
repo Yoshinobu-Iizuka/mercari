@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get 'logout', on: :collection
     get 'profile', on: :collection
   end
-
+  resources :users, only: [:index,:show]
   resources :creditcards, only: [:index]
   resources :items_buy_confirms, only: [:index]
   

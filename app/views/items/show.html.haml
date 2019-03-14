@@ -40,23 +40,27 @@
               = link_to '学園', "#"
           %tr
             %th 商品のサイズ
-            %td FREE SIZE
+            %td
+              = @item.size
           %tr
             %th 商品の状態
-            %td 目立った傷や汚れなし
+            %td
+              = @item.condition
           %tr
             %th 配送料の負担
             %td 着払い
           %tr
             %th 発送の方法
-            %td 未定
+            %td
+              = @item.shipping_method
           %tr
             %th 発送元地域
             %td
               = link_to '東京都', "#"
           %tr
             %th 発送日の目安
-            %td 1~2日で発送
+            %td
+              = @item.estimated_shipping_date
     .item-card-details--price
       %span.item-price ¥ 836
       %span.item-tax (税込)
