@@ -3,6 +3,9 @@
   padding: 40px 0;
   background: $bg-item-card-color;
   width: 456px;
+  @include tab {
+    width: 95%;
+  }
 }
 .login-area {
   padding-bottom: 32px;

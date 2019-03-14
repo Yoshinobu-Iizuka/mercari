@@ -1,5 +1,6 @@
 @import "./reset";
 @import "./config/variable";
+@import "./mixin/mixin";
 @import "./modules/base";
 @import "./config/common";
 @import "./side-bar";
@@ -18,5 +19,7 @@
 @import "./modules/buy_confirm";
 @import "./modules/logout";
 @import "./modules/mypage_confirm";
+@import "./modules/user_registration";
 @import "./modules/profile";
 @import "./modules/creditcard_registration";
+

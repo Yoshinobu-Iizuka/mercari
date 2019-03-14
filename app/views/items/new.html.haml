@@ -1,6 +1,6 @@
 = render partial: "layouts/users_header"
 .single-header
-%main.container
+%main.container.item-sell-sp
   .single-main
     .sale-container
       %h2.sale-head 商品の情報を入力
@@ -16,6 +16,11 @@
               ドラッグアンドドロップ
               %br>/
               またはクリックしてファイルをアップロード
+        .image-upload_sp
+          %label
+            %input.sale-upload__dropbox__btn{label: "image",type: "file"}
+            %pre.sale-upload__dropbox__text
+              タップして出品する画像を選ぶ
       .sale-content
         %h3.required-box-tag.title-font-black
           商品名

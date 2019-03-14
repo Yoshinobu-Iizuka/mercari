@@ -1,6 +1,9 @@
 .item-card-details {
   margin-top: 40px;
   padding: 24px 0 40px;
+  @include tab {
+    margin-top: 130px;
+  }
   h2 {
     font-size: 24px;
     font-weight: bold;
@@ -13,6 +16,10 @@
     justify-content: space-between;
     padding: 0 40px;
     margin: 16px 0 0;
+    @include tab {
+      flex-direction: column;
+      align-items: center;
+    }
     .item-image {
       max-width: 300px;
       &--main {
@@ -37,6 +44,10 @@
     .item-table {
       max-width: 300px;
       width: 100%;
+      @include tab {
+        max-width: inherit;
+        margin-top: 20px;
+      }
       table {
         width: 100%;
         tr {
@@ -107,6 +118,10 @@
     max-width: 620px;
     margin: 32px auto 0;
     line-height: 1.5;
+    @include tab {
+      width: 90%;
+      max-width: inherit;
+    }
     p {
       white-space: pre-wrap;
       text-align: left;
@@ -118,7 +133,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tab {
+      flex-direction: column;
+      max-width: inherit;
+    }
     .item-btn {
+      @include tab {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+      }
       button {
         background-color: $bg-color_base-gray;
         border: 1px solid $bg-color_base-gray;
@@ -137,6 +161,11 @@
     }
     .safe {
       font-size: 14px;
+      @include tab {
+        text-align: right;
+        width: 90%;
+        margin-top: 10px;
+      }
       a {
         color: $font-color_link;
         text-decoration: none;
@@ -174,11 +203,20 @@
   margin-top: 8px;
   form {
     width: 620px;
+    @include tab {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
     p {
       padding: 8px;
       font-size: 14px;
       line-height: 14px;
       background-color: #fff6de;
+      @include tab {
+        width: 90%;
+        margin: 0 auto;
+      }
     }
     textarea {
       width: 100%;
@@ -191,6 +229,10 @@
       background: $font-color_white;
       font-size: 16px;
       line-height: 1.5;
+      @include tab {
+        width: 90%;
+        margin: 10px auto;
+      }
     }
     .message-submit {
       width: 100%;
@@ -199,6 +241,10 @@
       background: $bg-color_light-gray;
       border: 1px solid $bg-color_light-gray;
       color: $font-color_white;
+      @include tab {
+        width: 90%;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -207,6 +253,9 @@
   margin: 24px auto 0;
   display: flex;
   justify-content: space-between;
+  @include tab {
+    width: 100%;
+  }
   .prev-item {
     padding-left: 15px;
     &::before {
@@ -282,6 +331,7 @@
   width: 700px;
   flex-wrap: wrap;
   justify-content: flex-start!important;
+  @include tab {}
   a + a {
     margin-left: 20px;
   }
@@ -323,9 +373,18 @@
     }
   }
 }
+.item-line-sp {
+  display: none;
+  @include tab {
+    padding: 0!important;
+  }
+}
 .users-item-head {
   width: 700px;
   margin: 24px auto 8px!important;
+  @include tab {
+    display: inline;
+  }
 }
 .item-line-detail + .item-line-detail {
   margin-top: 20px;

@@ -32,6 +32,8 @@
     %div
       = link_to '#' do
         = image_tag('banner-bokurano-heisei.jpg', alt: 'mercari')
+  .top-image-sp
+    = image_tag('banner-hajimeru-fortune.jpg', alt: 'mercari')
 / カルーセル
 .pickup.container
   %h2 ピックアップカテゴリー
@@ -39,427 +41,167 @@
     / 繰り返し
     %h3= link_to 'レディース 新着アイテム', "#"
     .item-line
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-    %p.link-to-all= link_to 'すべての商品を見る', "#"
+      - @ladies.each do |lady|
+        = link_to '#' do
+          .items-box
+            %figure.items-box--image
+              = image_tag(lady.images[0].name, alt: '商品タイトル商品タイトル商品タイトル')
+            .item--caption
+              %h4
+                = lady.name
+              %div
+                %p.price
+                  = "¥ #{lady.price}"
+                %p.like
+                  %i.far.fa-heart.like-icon
+                  1
+                %p (税込)
+    %p.link-to-all
+      = link_to 'すべての商品を見る', "#"
   %section.top-items.container
     / 繰り返し
     %h3= link_to 'メンズ 新着アイテム', "#"
     .item-line
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-    %p.link-to-all= link_to 'すべての商品を見る', "#"
+      - @mens.each do |men|
+        = link_to '#' do
+          .items-box
+            %figure.items-box--image
+              = image_tag(men.images[0].name, alt: '商品タイトル商品タイトル商品タイトル')
+            .item--caption
+              %h4
+                = men.name
+              %div
+                %p.price
+                  = "¥ #{men.price}"
+                %p.like
+                  %i.far.fa-heart.like-icon
+                  1
+                %p (税込)
+    %p.link-to-all
+      = link_to 'すべての商品を見る', "#"
   %section.top-items.container
     / 繰り返し
     %h3= link_to 'ベビー・キッズ 新着アイテム', "#"
     .item-line
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-    %p.link-to-all= link_to 'すべての商品を見る', "#"
+      - @babies.each do |baby|
+        = link_to '#' do
+          .items-box
+            %figure.items-box--image
+              = image_tag(baby.images[0].name, alt: '商品タイトル商品タイトル商品タイトル')
+            .item--caption
+              %h4
+                = baby.name
+              %div
+                %p.price
+                  = "¥ #{baby.price}"
+                %p.like
+                  %i.far.fa-heart.like-icon
+                  1
+                %p (税込)
+    %p.link-to-all
+      = link_to 'すべての商品を見る', "#"
   %section.top-items.container
     / 繰り返し
     %h3= link_to 'コスメ・香水・美容 新着アイテム', "#"
     .item-line
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-    %p.link-to-all= link_to 'すべての商品を見る', "#"
+      - @cosmes.each do |cosme|
+        = link_to '#' do
+          .items-box
+            %figure.items-box--image
+              = image_tag(cosme.images[0].name, alt: '商品タイトル商品タイトル商品タイトル')
+            .item--caption
+              %h4
+                = cosme.name
+              %div
+                %p.price
+                  = "¥ #{cosme.price}"
+                %p.like
+                  %i.far.fa-heart.like-icon
+                  1
+                %p (税込)
+    %p.link-to-all
+      = link_to 'すべての商品を見る', "#"
 .pickup.container
   %h2 ピックアップブランド
   %section.top-items.container
     / 繰り返し
     %h3= link_to 'シャネル 新着アイテム', "#"
     .item-line
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
+      - @chanels.each do |chanel|
+        = link_to '#' do
+          .items-box
+            %figure.items-box--image
+              = image_tag(chanel.images[0].name, alt: '商品タイトル商品タイトル商品タイトル')
+            .item--caption
+              %h4
+                = chanel.name
+              %div
+                %p.price
+                  = "¥ #{chanel.price}"
+                %p.like
+                  %i.far.fa-heart.like-icon
+                  1
+                %p (税込)
     %p.link-to-all= link_to 'すべての商品を見る', "#"
   %section.top-items.container
     / 繰り返し
-    %h3= link_to 'ルイ ヴィトン 新着アイテム', "#"
+    %h3= link_to 'ルイヴィトン 新着アイテム', "#"
     .item-line
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
+      - @vuittones.each do |vuittone|
+        = link_to '#' do
+          .items-box
+            %figure.items-box--image
+              = image_tag(vuittone.images[0].name, alt: '商品タイトル商品タイトル商品タイトル')
+            .item--caption
+              %h4
+                = vuittone.name
+              %div
+                %p.price
+                  = "¥ #{vuittone.price}"
+                %p.like
+                  %i.far.fa-heart.like-icon
+                  1
+                %p (税込)
     %p.link-to-all= link_to 'すべての商品を見る', "#"
   %section.top-items.container
     / 繰り返し
     %h3= link_to 'シュプリーム 新着アイテム', "#"
     .item-line
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
+      - @supremes.each do |supreme|
+        = link_to '#' do
+          .items-box
+            %figure.items-box--image
+              = image_tag(supreme.images[0].name, alt: '商品タイトル商品タイトル商品タイトル')
+            .item--caption
+              %h4
+                = supreme.name
+              %div
+                %p.price
+                  = "¥ #{supreme.price}"
+                %p.like
+                  %i.far.fa-heart.like-icon
+                  1
+                %p (税込)
     %p.link-to-all= link_to 'すべての商品を見る', "#"
   %section.top-items.container
     / 繰り返し
     %h3= link_to 'ナイキ 新着アイテム', "#"
     .item-line
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
-      = link_to '#' do
-        .items-box
-          %figure.items-box--image
-            = image_tag('m31884463082_1.jpg', alt: '商品タイトル商品タイトル商品タイトル')
-          .item--caption
-            %h4 商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル商品タイトル
-            %div
-              %p.price ¥ 800
-              %p.like
-                %i.far.fa-heart.like-icon
-                1
-            %p (税込)
+      - @nikes.each do |nike|
+        = link_to '#' do
+          .items-box
+            %figure.items-box--image
+              = image_tag(nike.images[0].name, alt: '商品タイトル商品タイトル商品タイトル')
+            .item--caption
+              %h4
+                = nike.name
+              %div
+                %p.price
+                  = "¥ #{nike.price}"
+                %p.like
+                  %i.far.fa-heart.like-icon
+                  1
+                %p (税込)
     %p.link-to-all= link_to 'すべての商品を見る', "#"
 = render partial: "layouts/sale_item_btn"
 = render partial: "layouts/footer"
