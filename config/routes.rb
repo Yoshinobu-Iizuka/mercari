@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :items do
     get 'confirm', on: :collection
+    get 'itemsuser', on: :collection
   end
   resources :users do
     get 'logout', on: :collection
@@ -12,6 +13,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index,:show]
   resources :creditcards, only: [:index]
   resources :items_buy_confirms, only: [:index]
-  
 end
 
