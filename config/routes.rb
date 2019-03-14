@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     get 'profile', on: :collection
   end
   resources :users, only: [:index,:show]
-  resources :items, only: [:index,:new]
   resources :creditcards, only: [:index]
   resources :items_buy_confirms, only: [:index]
 end
