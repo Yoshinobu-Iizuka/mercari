@@ -1,5 +1,6 @@
 .l-content
   .mypage-user
+    = image_tag("user-bg.jpg", class: "bg-img")
     = link_to "/users", class: "mypage-user__icon" do
       .mypage-user__icon--thumb
         = image_tag "https://mcdn.mercariapp.com/images/member_photo_noimage_thumb.png", alt: "プロフィール"
@@ -83,6 +84,7 @@
         %li.mypage-go-list
           =link_to "一覧を見る", "mypage/notification"
       %ul.mypage-tab-todo
+        =image_tag("logo-gray-icon.svg", class: "gray-icon")
         %li.mypage-tab-todo__nolist
           現在、やることリストはありません
 
@@ -100,7 +102,9 @@
     .tab-contents
       %ul.dealing-detail
         %li.mypage-item-nolist
+          =image_tag("logo-gray-icon.svg", class: "gray-icon")
           取引中の商品がありません
       %ul.done-detail
         %li.mypage-item-nolist
+          =image_tag("logo-gray-icon.svg", class: "gray-icon")
           過去の取引はありません
